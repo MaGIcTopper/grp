@@ -94,70 +94,18 @@ footer{text-align:center;padding:26px 20px;color:var(--muted);font-size:12.5px;b
 .crime .pen{font-size:12.5px;color:var(--red);font-weight:600;background:#fdf4f3;padding:5px 10px;border-radius:6px;display:inline-block}
 .crime .cr-badge{background:#fdecea;color:var(--red);font-size:10.5px;font-weight:700;padding:2px 7px;border-radius:5px;letter-spacing:.5px}
 #toTop{display:none;position:fixed;right:20px;bottom:20px;width:44px;height:44px;border-radius:50%;border:none;background:var(--accent);color:#fff;font-size:20px;cursor:pointer;box-shadow:var(--shadow);z-index:60}
-
-/* ================= ТЁМНАЯ ТЕМА ================= */
-html[data-theme=dark]{
-  --bg:#0d131b;--card:#151e2a;--text:#e3e9f1;--muted:#92a2b8;
-  --border:#263446;--accent:#4b8ee0;
-}
-html[data-theme=dark] .card{background:var(--card);border-color:var(--border)}
-html[data-theme=dark] .sub{color:#92a2b8}
-/* заголовки */
-html[data-theme=dark] .card>h2,
-html[data-theme=dark] h3,
-html[data-theme=dark] h4,
-html[data-theme=dark] .quick .qt,
-html[data-theme=dark] .crime h5,
-html[data-theme=dark] .hero h2,
-html[data-theme=dark] .acc-h,
-html[data-theme=dark] td.term{color:#a9c8ff}
-html[data-theme=dark] .card>h2 .badge{background:#1f2d40;color:#7fb4ff}
-/* таблицы */
-html[data-theme=dark] th{background:#1c2837;color:#a9c8ff;border-bottom-color:#263446}
-html[data-theme=dark] td{color:#cfd9e6;border-bottom-color:#1e2a3a}
-html[data-theme=dark] tr:hover td{background:#1c2837}
-html[data-theme=dark] td.law{color:#7fb4ff}
-/* меню */
-html[data-theme=dark] nav a{color:#cfd9e6}
-html[data-theme=dark] nav a:hover{background:#1c2837;color:#7fb4ff}
-html[data-theme=dark] nav a.active{background:var(--accent);color:#fff}
-html[data-theme=dark] nav .navgroup{color:#7a8ba3}
-/* быстрые карточки */
-html[data-theme=dark] .quick{background:var(--card);border-color:var(--border)}
-html[data-theme=dark] .quick:hover{background:#1c2837;border-color:var(--accent)}
-html[data-theme=dark] .quick .qd{color:#92a2b8}
-/* аккордеоны */
-html[data-theme=dark] .acc{background:var(--card);border-color:var(--border)}
-html[data-theme=dark] .acc-h:hover{background:#1c2837}
-html[data-theme=dark] .acc-b{color:#b8c4d4}
-html[data-theme=dark] .acc-b .stamp{color:#92a2b8}
-html[data-theme=dark] .acc-h .decree-num{background:#1f2d40;color:#7fb4ff}
-/* карточки преступлений */
-html[data-theme=dark] .crime{background:var(--card);border-color:var(--border)}
-html[data-theme=dark] .crime p{color:#b8c4d4}
-html[data-theme=dark] .crime h5 .n{background:#2a5a9e;color:#fff}
-html[data-theme=dark] .crime .pen{background:#2a1a1a;color:#ff9a8a}
-html[data-theme=dark] .crime .cr-badge{background:#2a1a1a;color:#ff9a8a}
-/* заметки */
-html[data-theme=dark] .note{background:#1f2530;color:#cfd9e6;border-left-color:var(--gold)}
-html[data-theme=dark] .note b{color:#e3e9f1}
-html[data-theme=dark] .note.red{background:#2a1a1a;border-left-color:#c0392b}
-html[data-theme=dark] .note.blue{background:#0f1e30;border-left-color:#4b8ee0}
-html[data-theme=dark] .note.green{background:#0f2a1e;border-left-color:#1e8e5a}
-/* теги */
-html[data-theme=dark] .tag.red{background:#2a1a1a;color:#ff9a8a}
-html[data-theme=dark] .tag.amber{background:#2a2415;color:#e0b060}
-html[data-theme=dark] .tag.green{background:#15302a;color:#6dd4a8}
-html[data-theme=dark] .tag.blue{background:#152238;color:#7fb4ff}
-html[data-theme=dark] .tag.grey{background:#1f2d40;color:#92a2b8}
-/* hero */
-html[data-theme=dark] .hero{background:linear-gradient(135deg,#0a1a30 0%,#102a4d 100%)}
-html[data-theme=dark] .hero p{color:#9fb4d0}
-/* футер */
-html[data-theme=dark] footer{color:#92a2b8}
-/* кнопка наверх */
-html[data-theme=dark] #toTop{background:#4b8ee0}
-
+/* ---------- ФОРМА ---------- */
+.field{display:flex;flex-direction:column;gap:5px}
+.field label{font-size:12px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.3px}
+.field input,.field textarea{padding:9px 12px;border:1px solid var(--border);border-radius:8px;font-size:14px;font-family:inherit;background:#fff;color:var(--text);outline:none;width:100%}
+.field input:focus,.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(47,111,208,.1)}
+.field textarea{resize:vertical;line-height:1.5}
+.calc-row{display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end;margin-bottom:16px}
+.btn{font-size:12.5px;padding:7px 14px;border-radius:7px;border:1px solid var(--border);background:#fff;color:var(--muted);cursor:pointer;transition:.15s;font-family:inherit}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.btn.primary:hover{background:#255cb5}
+.btn:disabled{opacity:.6;cursor:not-allowed}
 @media(max-width:960px){
   .layout{flex-direction:column;padding:14px}
   aside{width:100%;flex:none;position:static;max-height:none}
@@ -169,6 +117,52 @@ html[data-theme=dark] #toTop{background:#4b8ee0}
   .hero{padding:20px}
   .hero h2{font-size:19px}
 }
+/* ================= ТЁМНАЯ ТЕМА ================= */
+html[data-theme=dark]{--bg:#0d131b;--card:#151e2a;--text:#e3e9f1;--muted:#92a2b8;--border:#263446;--accent:#4b8ee0;}
+html[data-theme=dark] .card{background:var(--card);border-color:var(--border)}
+html[data-theme=dark] .sub{color:#92a2b8}
+html[data-theme=dark] .card>h2,html[data-theme=dark] h3,html[data-theme=dark] h4,
+html[data-theme=dark] .quick .qt,html[data-theme=dark] .crime h5,
+html[data-theme=dark] .hero h2,html[data-theme=dark] .acc-h,html[data-theme=dark] td.term{color:#a9c8ff}
+html[data-theme=dark] .card>h2 .badge{background:#1f2d40;color:#7fb4ff}
+html[data-theme=dark] th{background:#1c2837;color:#a9c8ff;border-bottom-color:#263446}
+html[data-theme=dark] td{color:#cfd9e6;border-bottom-color:#1e2a3a}
+html[data-theme=dark] tr:hover td{background:#1c2837}
+html[data-theme=dark] td.law{color:#7fb4ff}
+html[data-theme=dark] nav a{color:#cfd9e6}
+html[data-theme=dark] nav a:hover{background:#1c2837;color:#7fb4ff}
+html[data-theme=dark] nav a.active{background:var(--accent);color:#fff}
+html[data-theme=dark] nav .navgroup{color:#7a8ba3}
+html[data-theme=dark] .quick{background:var(--card);border-color:var(--border)}
+html[data-theme=dark] .quick:hover{background:#1c2837;border-color:var(--accent)}
+html[data-theme=dark] .quick .qd{color:#92a2b8}
+html[data-theme=dark] .acc{background:var(--card);border-color:var(--border)}
+html[data-theme=dark] .acc-h:hover{background:#1c2837}
+html[data-theme=dark] .acc-b{color:#b8c4d4}
+html[data-theme=dark] .acc-b .stamp{color:#92a2b8}
+html[data-theme=dark] .acc-h .decree-num{background:#1f2d40;color:#7fb4ff}
+html[data-theme=dark] .crime{background:var(--card);border-color:var(--border)}
+html[data-theme=dark] .crime p{color:#b8c4d4}
+html[data-theme=dark] .crime h5 .n{background:#2a5a9e;color:#fff}
+html[data-theme=dark] .crime .pen{background:#2a1a1a;color:#ff9a8a}
+html[data-theme=dark] .crime .cr-badge{background:#2a1a1a;color:#ff9a8a}
+html[data-theme=dark] .note{background:#1f2530;color:#cfd9e6;border-left-color:var(--gold)}
+html[data-theme=dark] .note b{color:#e3e9f1}
+html[data-theme=dark] .note.red{background:#2a1a1a;border-left-color:#c0392b}
+html[data-theme=dark] .note.blue{background:#0f1e30;border-left-color:#4b8ee0}
+html[data-theme=dark] .note.green{background:#0f2a1e;border-left-color:#1e8e5a}
+html[data-theme=dark] .tag.red{background:#2a1a1a;color:#ff9a8a}
+html[data-theme=dark] .tag.amber{background:#2a2415;color:#e0b060}
+html[data-theme=dark] .tag.green{background:#15302a;color:#6dd4a8}
+html[data-theme=dark] .tag.blue{background:#152238;color:#7fb4ff}
+html[data-theme=dark] .tag.grey{background:#1f2d40;color:#92a2b8}
+html[data-theme=dark] .hero{background:linear-gradient(135deg,#0a1a30 0%,#102a4d 100%)}
+html[data-theme=dark] .hero p{color:#9fb4d0}
+html[data-theme=dark] footer{color:#92a2b8}
+html[data-theme=dark] #toTop{background:#4b8ee0}
+html[data-theme=dark] .field input,html[data-theme=dark] .field textarea{background:#0f1722;color:var(--text);border-color:var(--border)}
+html[data-theme=dark] .btn{background:#1c2837;color:#cfd9e6;border-color:var(--border)}
+html[data-theme=dark] .btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
 </style>
 </head>
 <body>
@@ -206,6 +200,8 @@ html[data-theme=dark] #toTop{background:#4b8ee0}
         <div class="navgroup">Практика</div>
         <li><a href="#" data-target="penalties">🎯 Виды наказаний</a></li>
         <li><a href="#" data-target="memo">💡 Памятки</a></li>
+        <div class="navgroup">Обратная связь</div>
+        <li><a href="#" data-target="report">📩 Анонимное обращение</a></li>
       </ul>
     </nav>
   </aside>
@@ -230,7 +226,7 @@ html[data-theme=dark] #toTop{background:#4b8ee0}
           <div class="quick" data-goto="upk"><div class="qi">⚖️</div><div class="qt">Процессуальный кодекс</div><div class="qd">Понятия, соучастие, формы вины, участники процесса</div></div>
           <div class="quick" data-goto="smj"><div class="qi">🏛</div><div class="qt">Положение о МЮ</div><div class="qd">Структура, офисы, юрисдикция</div></div>
           <div class="quick" data-goto="police"><div class="qi">👮</div><div class="qt">Юрисдикции полиции</div><div class="qd">Полевая, Гражданская, Патрульная службы, ОБ</div></div>
-          <div class="quick" data-goto="decrees"><div class="qi">📜</div><div class="qt">Указы правительства</div><div class="qd">Discord, мобилизация, нравственность и др.</div></div>
+          <div class="quick" data-goto="report"><div class="qi">📩</div><div class="qt">Анонимное обращение</div><div class="qd">О действии или бездействии высокопоставленного лица</div></div>
         </div>
       </div>
 
@@ -258,484 +254,310 @@ html[data-theme=dark] #toTop{background:#4b8ee0}
     </section>
 
     <!-- ================ УК УРОВЕНЬ 1 ================ -->
-    <section id="uk1">
-      <div class="card">
-        <h2>Уголовный кодекс · Уровень 1 <span class="badge">гражданские лица</span></h2>
-        <p class="sub">Преступления, совершаемые гражданскими лицами. Наказания по большинству статей: предупреждение, арест до 500 секунд.</p>
-        <div id="crimes1"></div>
-      </div>
-    </section>
+    <section id="uk1"><div class="card">
+      <h2>Уголовный кодекс · Уровень 1 <span class="badge">гражданские лица</span></h2>
+      <p class="sub">Преступления, совершаемые гражданскими лицами. Наказания по большинству статей: предупреждение, арест до 500 секунд.</p>
+      <div id="crimes1"></div>
+    </div></section>
 
     <!-- ================ УК УРОВЕНЬ 2 ================ -->
-    <section id="uk2">
-      <div class="card">
-        <h2>Уголовный кодекс · Уровень 2 <span class="badge">госслужащие</span></h2>
-        <p class="sub">Преступления, совершаемые госслужащими во время службы. Наказания включают выговор в подразделении, фракционный выговор, исключение из подразделения/фракции.</p>
-        <div id="crimes2"></div>
-      </div>
-    </section>
+    <section id="uk2"><div class="card">
+      <h2>Уголовный кодекс · Уровень 2 <span class="badge">госслужащие</span></h2>
+      <p class="sub">Преступления, совершаемые госслужащими во время службы.</p>
+      <div id="crimes2"></div>
+    </div></section>
 
     <!-- ================ УК УРОВЕНЬ 3 ================ -->
-    <section id="uk3">
-      <div class="card">
-        <h2>Уголовный кодекс · Уровень 3 <span class="badge">штаб / верховное командование</span></h2>
-        <p class="sub">Преступления от штабного и верховного командования. Максимальный набор санкций — вплоть до чёрных списков.</p>
-        <div id="crimes3"></div>
-      </div>
-    </section>
+    <section id="uk3"><div class="card">
+      <h2>Уголовный кодекс · Уровень 3 <span class="badge">штаб / верховное командование</span></h2>
+      <p class="sub">Преступления от штабного и верховного командования.</p>
+      <div id="crimes3"></div>
+    </div></section>
 
     <!-- ================ УК УРОВЕНЬ 4 ================ -->
-    <section id="uk4">
-      <div class="card">
-        <h2>Уголовный кодекс · Уровень 4 <span class="badge">особо тяжкие</span></h2>
-        <p class="sub">Серьёзные преступления от любого лица. По большинству — <b>предел наказания не ограничен</b>. Ряд статей предусматривает ОЧС.</p>
-        <div id="crimes4"></div>
-      </div>
-    </section>
+    <section id="uk4"><div class="card">
+      <h2>Уголовный кодекс · Уровень 4 <span class="badge">особо тяжкие</span></h2>
+      <p class="sub">Серьёзные преступления от любого лица. По большинству — <b>предел наказания не ограничен</b>.</p>
+      <div id="crimes4"></div>
+    </div></section>
 
     <!-- ================ ПРОЦЕССУАЛЬНЫЙ КОДЕКС ================ -->
-    <section id="upk">
-      <div class="card">
-        <h2>Statescode of Procedure <span class="badge">Процессуальный кодекс</span></h2>
-        <p class="sub">Понятие преступления, соучастие, обстоятельства, исключающие преступность, формы вины, назначение наказания, участники процесса.</p>
-
-        <div class="acc"><div class="acc-h">Глава 1. Понятие преступления, правонарушения, проступка и покушения <span class="ar">▶</span></div>
-        <div class="acc-b">
-          <p><b>Ст. 1.1. Преступление.</b> Действие (или бездействие), которое человек совершил виновно, которое опасно для общества и которое запрещено Кодексом. За его совершение обязательно следует наказание.</p>
-          <p><b>Ст. 1.2. Малозначительное преступление.</b> Если действие формально попадает под статью УК, но настолько мелкое и незначительное, что не представляет серьёзной опасности для общества, оно не признаётся преступлением.</p>
-          <p><b>Ст. 1.3. Совокупность преступлений.</b> Когда человек совершил два или более самостоятельных преступления — ответственность за каждое в отдельности по соответствующей статье.</p>
-          <p><b>Ст. 1.4. Покушение на преступление.</b> Умышленные действия (или бездействие), направленные на совершение преступления, но не доведённые до конца по причинам, не зависящим от воли лица. Наказание — по той же статье, что и за законченное преступление (с пометкой о покушении), но не может превышать половины.</p>
-          <p><b>Признаки преступления:</b></p>
-          <ul>
-            <li><b>Виновность</b> — деяние совершено умышленно или по неосторожности.</li>
-            <li><b>Общественная опасность</b> — причиняет вред или создаёт реальную угрозу.</li>
-            <li><b>Противоправность</b> — прямо запрещено конкретной статьёй УК.</li>
-            <li><b>Наказуемость</b> — Кодекс предусматривает конкретное наказание.</li>
-          </ul>
-        </div></div>
-
-        <div class="acc"><div class="acc-h">Глава 2. Соучастие в преступлении <span class="ar">▶</span></div>
-        <div class="acc-b">
-          <p><b>Ст. 2.1. Соучастие.</b> Ситуация, когда человек помог совершить преступление или намеренно бездействовал (например, не предотвратил преступление, хотя был обязан), в то время как другое лицо совершало преступление.</p>
-          <p><b>Ст. 2.2. Виды соучастников:</b></p>
-          <ul>
-            <li><b>Исполнитель</b> — лично совершил преступление или вместе с другими (соисполнителями).</li>
-            <li><b>Организатор</b> — организовал преступление (спланировал, подготовил) или руководил его совершением.</li>
-            <li><b>Подстрекатель</b> — склонил другого к преступлению (уговоры, подкуп, угрозы и т.д.).</li>
-            <li><b>Пособник</b> — помог совершить (советы, информация, орудия, устранение препятствий).</li>
-          </ul>
-          <p><b>Ст. 2.3.</b> Все соучастники несут уголовную ответственность в равном объёме — как исполнитель.</p>
-          <p><b>Ст. 2.4.</b> Совершение преступления в составе группы лиц — основание для более строгого наказания.</p>
-        </div></div>
-
-        <div class="acc"><div class="acc-h">Глава 3. Обстоятельства, исключающие преступность деяния <span class="ar">▶</span></div>
-        <div class="acc-b">
-          <p><b>Ст. 3.1. Когда причинение вреда НЕ является преступлением:</b></p>
-          <ul>
-            <li><b>Необходимая оборона (самозащита).</b> Защита себя, своего имущества. Сила защиты не должна превышать силу нападения. Пример превышения: повторный выстрел в убегающего нападавшего.</li>
-            <li><b>Задержание преступника органами власти.</b> Если задержать другими способами было невозможно, и применение силы (включая табельное оружие) было вынужденной мерой.</li>
-            <li><b>Обоснованный риск.</b> Причинение вреда (не связанного с жизнью/здоровьем людей) для достижения общественно полезной цели.</li>
-          </ul>
-          <p><b>Ст. 3.2. Неосторожность.</b> Деяние, совершённое неумышленно, по неосторожности, не является преступлением — кроме случаев, когда в статье УК специально указано, что неосторожные действия наказываются.</p>
-          <p><b>Ст. 3.3. Умысел.</b> Деяние признаётся умышленным, если человек осознавал, что поступает противоправно, и намеренно совершал эти действия.</p>
-          <p><b>Ст. 3.4. Формы вины:</b></p>
-          <ul>
-            <li><b>Прямой умысел:</b> осознавал опасность, предвидел последствия и желал их наступления.</li>
-            <li><b>Косвенный умысел:</b> осознавал опасность, предвидел, не желал, но сознательно допускал или относился безразлично.</li>
-            <li><b>Небрежность:</b> не предвидел, хотя при необходимой внимательности должен был и мог предвидеть.</li>
-            <li><b>Легкомыслие:</b> предвидел, но самонадеянно рассчитывал предотвратить.</li>
-          </ul>
-        </div></div>
-
-        <div class="acc"><div class="acc-h">Глава 4. Назначение наказания <span class="ar">▶</span></div>
-        <div class="acc-b">
-          <p><b>Ст. 4.1. Принцип справедливости.</b> Наказание должно соответствовать пределам, установленным конкретной статьёй Кодекса.</p>
-          <p><b>Ст. 4.2. Общие начала.</b> Суд учитывает: характер и степень общественной опасности; личность виновного; смягчающие и отягчающие обстоятельства.</p>
-          <p><b>Ст. 4.3. Смягчающие обстоятельства:</b></p>
-          <ul>
-            <li>Принуждение и зависимость (физическое/психическое, материальная/служебная).</li>
-            <li>Служебное положение и приказы руководства.</li>
-            <li>Нарушение условий правомерности (защита с превышением, нарушение условий задержания).</li>
-            <li>Противоправность или аморальность поведения потерпевшего.</li>
-            <li>Малозначительность деяния.</li>
-            <li>Явка с повинной, активное способствование раскрытию, сотрудничество со следствием.</li>
-            <li>Заглаживание вреда (медпомощь, возмещение ущерба и морального вреда).</li>
-            <li>Добровольное, полное и однозначное признание вины до приговора.</li>
-          </ul>
-          <p><b>Отягчающие обстоятельства:</b></p>
-          <ul>
-            <li>Групповой характер.</li>
-            <li>Мотивы ненависти (политической, идеологической, расовой, национальной, религиозной).</li>
-            <li>Месть за правомерные действия, сокрытие другого преступления.</li>
-            <li>Нападение на служебных лиц в связи с их деятельностью.</li>
-            <li>Особая жестокость, садизм, издевательства, мучения.</li>
-            <li>Злоупотребление доверием.</li>
-            <li>Повторность и рецидив.</li>
-          </ul>
-          <p><b>Ст. 4.5. Наказание.</b> Мера государственного принуждения, назначаемая по приговору суда, заключается в лишении или ограничении прав и свобод.</p>
-          <p><b>Ст. 4.7. Пределы.</b> Наказание не может превышать максимум, установленный в конкретной статье. <b>Исключение:</b> террористический акт — на усмотрение Верховного судьи.</p>
-          <p><b>Ст. 4.8.</b> Деяния с пометкой (CR) — влекут судимость.</p>
-        </div></div>
-
-        <div class="acc"><div class="acc-h">Глава 5. Лица, участвующие в процессе <span class="ar">▶</span></div>
-        <div class="acc-b">
-          <ul>
-            <li><b>Судья</b> — лицо, наделённое полномочиями по осуществлению правосудия.</li>
-            <li><b>Истец (сторона обвинения)</b> — лицо, подавшее исковое заявление. Обвинитель вправе иметь помощников.</li>
-            <li><b>Ответчик (сторона защиты)</b> — лицо, на которое подали иск.</li>
-            <li><b>Третье лицо</b> — участвующее на стороне обвинения или защиты, если решение может повлиять на его права/обязанности.</li>
-            <li><b>Свидетель</b> — лицо, которое может подтвердить или опровергнуть обстоятельства.</li>
-            <li><b>Судебный корпус (Judiciary)</b> — совокупность судебных органов и должностных лиц.</li>
-            <li><b>Судебный секретарь</b> — уполномоченное судом лицо: повестки, вызовы, протокол заседания.</li>
-            <li><b>Судебный пристав</b> — сотрудник правоохранительных органов (МВД), прикомандированный к суду. Обеспечивает порядок, исполняет распоряжения судьи и вердикт.</li>
-          </ul>
-        </div></div>
-
-        <div class="acc"><div class="acc-h">Глава 6. Суды и судебные инстанции <span class="ar">▶</span></div>
-        <div class="acc-b">
-          <ul>
-            <li><b>Суд (судебный орган)</b> — орган государственной власти, осуществляющий правосудие. Глава — председатель (President).</li>
-            <li><b>Судебная инстанция (Circuit)</b> — суд/орган/часть, выполняющая строго определённую функцию.</li>
-            <li><b>Государственный военный суд (SCM)</b> — юрисдикция: сухопутные и военно-воздушные силы. Составы: Local Senate, Appeal Senate.</li>
-            <li><b>Высший партийный суд (SLC)</b> — юрисдикция: Национальная лига и Гвардия. Составы: Local Senate, Appeal Senate.</li>
-          </ul>
-        </div></div>
-
-        <div class="acc"><div class="acc-h">Глава 7. Подготовка и назначение заседания <span class="ar">▶</span></div>
-        <div class="acc-b">
-          <p><b>Ст. 7.1.</b> Судья обязан назначить заседание не позже чем за 24 часа до его начала.</p>
-          <p><b>Ст. 7.2.</b> Судебный секретарь рассылает повестки. Судья обязан убедиться, что у участников есть актуальный Discord.</p>
-          <p><b>Ст. 7.3. Формы заседаний:</b></p>
-          <ul>
-            <li><b>Открытое</b> — присутствуют все желающие. Корреспонденция — с разрешения судьи.</li>
-            <li><b>Закрытое</b> — только участники процесса. Фото/видео запрещено.</li>
-            <li><b>Заочное</b> — сторона не явилась без уважительной причины или материалы позволяют рассмотреть дело без неё.</li>
-          </ul>
-          <p><b>Ст. 7.4.</b> Судья проверяет явку, удостоверяется в личности участников (конфиденциальность не действует), привлекает пристава для обеспечения порядка.</p>
-        </div></div>
-
-        <div class="acc"><div class="acc-h">Глава 8. Права и обязанности участников во время заседания <span class="ar">▶</span></div>
-        <div class="acc-b">
-          <p><b>Судья вправе:</b> запрашивать доказательства; задавать вопросы; прерывать не по делу; отказывать в неотносимых доказательствах; выносить акт на основе внутреннего убеждения; проводить заочно при неявке; отказать в иске, если не явились обе стороны.</p>
-          <p><b>Судья обязан:</b> быть справедливым, честным, беспристрастным; рассматривать обращения независимо от статуса; не ронять авторитет судебной системы.</p>
-          <p><b>Стороны вправе:</b> знакомиться с материалами; заявлять ходатайства и отводы; высказывать аргументы; представлять и оспаривать доказательства; знакомиться с ходатайствами других лиц; возражать — вставая: <i>«Возражаю [протестую], Ваша Честь»</i>.</p>
-          <p><b>Стороны обязаны:</b> посещать заседания или уведомлять о причинах неявки; соблюдать сроки; иметь актуальный Discord; соблюдать этику; приходить вовремя (иначе — неуважение к суду).</p>
-        </div></div>
-
-        <div class="acc"><div class="acc-h">Глава 9. Порядок судебного заседания <span class="ar">▶</span></div>
-        <div class="acc-b">
-          <p><b>1. Открытие.</b> Судья входит — все встают. Объявление дела. Проверка явки. Разъяснение права на отвод. Определение режима (открытый/закрытый).</p>
-          <p><b>2. Вступительная часть.</b> Разъяснение прав участникам, обязанностей, правил поведения (не разговаривать, не курить, не иметь оружие/броню; обращение — «Ваша Честь»). Ходатайства до начала рассмотрения по существу.</p>
-          <p><b>3. Рассмотрение дела по существу.</b> Изложение обвинения прокурором; позиция защиты; исследование доказательств (обвинение → перекрёстный допрос → защита → перекрёстный допрос); показания свидетелей и экспертов; завершение исследования.</p>
-          <p><b>4. Прения сторон.</b> Речь обвинителя; речь защиты; реплики (до 1–2 минут); последнее слово подсудимого (никто не вправе прерывать).</p>
-          <p><b>5. Приговор.</b> Удаление в совещательную комнату; возвращение («Прошу всех встать, суд оглашает приговор»); оглашение резолютивной части; разъяснение порядка обжалования (решение Народной судебной палаты обжалованию не подлежит); закрытие заседания.</p>
-        </div></div>
-      </div>
-    </section>
+    <section id="upk"><div class="card">
+      <h2>Statescode of Procedure <span class="badge">Процессуальный кодекс</span></h2>
+      <p class="sub">Понятие преступления, соучастие, обстоятельства, исключающие преступность, формы вины, назначение наказания, участники процесса.</p>
+      <div class="acc"><div class="acc-h">Глава 1. Понятие преступления и покушения <span class="ar">▶</span></div>
+      <div class="acc-b">
+        <p><b>Ст. 1.1.</b> Преступление — виновное, общественно опасное, противоправное, наказуемое деяние.</p>
+        <p><b>Ст. 1.2.</b> Малозначительное деяние не признаётся преступлением.</p>
+        <p><b>Ст. 1.3.</b> Совокупность — ответственность за каждое преступление отдельно.</p>
+        <p><b>Ст. 1.4.</b> Покушение — наказание не более половины от максимума статьи.</p>
+      </div></div>
+      <div class="acc"><div class="acc-h">Глава 2. Соучастие <span class="ar">▶</span></div>
+      <div class="acc-b"><ul>
+        <li><b>Исполнитель</b> — лично совершил.</li>
+        <li><b>Организатор</b> — спланировал или руководил.</li>
+        <li><b>Подстрекатель</b> — склонил.</li>
+        <li><b>Пособник</b> — помог.</li>
+      </ul><p>Все отвечают в равном объёме. Групповое — строже.</p></div></div>
+      <div class="acc"><div class="acc-h">Глава 3. Обстоятельства, исключающие преступность <span class="ar">▶</span></div>
+      <div class="acc-b"><ul>
+        <li>Необходимая оборона (без превышения).</li>
+        <li>Задержание преступника органами власти.</li>
+        <li>Обоснованный риск.</li>
+        <li>Неосторожность — кроме случаев, где прямо наказывается.</li>
+      </ul><p><b>Формы вины:</b> прямой умысел, косвенный умысел, небрежность, легкомыслие.</p></div></div>
+      <div class="acc"><div class="acc-h">Глава 4. Назначение наказания <span class="ar">▶</span></div>
+      <div class="acc-b">
+        <p><b>Смягчающие:</b> принуждение, приказ, превышение обороны, аморальность потерпевшего, малозначительность, явка с повинной, заглаживание вреда, признание вины.</p>
+        <p><b>Отягчающие:</b> группа, мотивы ненависти, месть, нападение на служебных лиц, особая жестокость, злоупотребление доверием, рецидив.</p>
+        <p><b>Ст. 4.6.</b> Виды наказаний — см. раздел «Виды наказаний».</p>
+        <p><b>Ст. 4.7.</b> Пределы — не выше максимума статьи. Исключение: террористический акт.</p>
+      </div></div>
+      <div class="acc"><div class="acc-h">Глава 5. Участники процесса <span class="ar">▶</span></div>
+      <div class="acc-b"><ul>
+        <li>Судья · Истец · Ответчик · Третье лицо · Свидетель</li>
+        <li>Судебный корпус · Секретарь · Пристав</li>
+      </ul></div></div>
+      <div class="acc"><div class="acc-h">Глава 6. Суды и инстанции <span class="ar">▶</span></div>
+      <div class="acc-b"><ul>
+        <li>Greater Kelvetic Statescourt — Criminal / Appellate Circuit</li>
+        <li>Stateschamber of Peoples Justice (НСП) — 4 уровень + апелляции ОЧС</li>
+        <li>SCM — ВС и ВВС · SLC — НЛ и Гвардия</li>
+      </ul></div></div>
+      <div class="acc"><div class="acc-h">Глава 7. Подготовка заседания <span class="ar">▶</span></div>
+      <div class="acc-b">
+        <p>Заседание назначается не позже чем за 24 часа. Формы: открытое / закрытое / заочное.</p>
+      </div></div>
+      <div class="acc"><div class="acc-h">Глава 8. Права и обязанности сторон <span class="ar">▶</span></div>
+      <div class="acc-b">
+        <p>Право знакомиться, заявлять ходатайства, отводы, представлять доказательства, возражать («Возражаю, Ваша Честь»).</p>
+        <p>Обязанность — посещать, уведомлять о причинах неявки, иметь Discord, соблюдать этику.</p>
+      </div></div>
+      <div class="acc"><div class="acc-h">Глава 9. Порядок заседания <span class="ar">▶</span></div>
+      <div class="acc-b">
+        <p>Открытие → вступительная часть → рассмотрение по существу → прения → последнее слово → приговор.</p>
+        <p>Решение НСП обжалованию не подлежит.</p>
+      </div></div>
+    </div></section>
 
     <!-- ================ ПОЛОЖЕНИЕ О МЮ ================ -->
-    <section id="smj">
-      <div class="card">
-        <h2>Положение о Государственном министерстве юстиции <span class="badge">SMJ</span></h2>
-        <p class="sub">Издано 14.07.1945 · Редактировано 21.08.1945 · Составлено Garmadon_Lord2o · Заверено Ruwhobge · Утверждено lasstdreamer</p>
+    <section id="smj"><div class="card">
+      <h2>Положение о Государственном министерстве юстиции <span class="badge">SMJ</span></h2>
+      <p class="sub">Издано 14.07.1945 · Редактировано 21.08.1945 · Составлено Garmadon_Lord2o · Заверено Ruwhobge · Утверждено lasstdreamer</p>
 
-        <div class="acc open"><div class="acc-h">Неприкосновенность сотрудников <span class="ar">▶</span></div>
-        <div class="acc-b">
-          <p>Любой сотрудник SMJ, исполняющий служебные обязанности, обладает полной служебной и физической неприкосновенностью.</p>
-          <p><b>Запрещено:</b> незаконное задержание, арест, любое физическое воздействие или причинение вреда здоровью при любых обстоятельствах — кроме случаев, прямо предусмотренных Положением.</p>
-          <p><b>Смена должности/звания</b> может быть произведена исключительно:</p>
-          <ul>
-            <li>Вечным Лидером или членами Офиса Вечного Лидера (Советник, Адъютант, Заместитель Лидера);</li>
-            <li>Канцлером / Вице-канцлером Великокельветии;</li>
-            <li>Государственным министром юстиции (его Заместителем);</li>
-            <li>Судебным директором (Заместителем) — непосредственным руководителем сотрудника.</li>
-          </ul>
-          <p><b>Снятие неприкосновенности</b> возможно только:</p>
-          <ul>
-            <li>Вечным Лидером;</li>
-            <li>любым членом Офиса Вечного Лидера;</li>
-            <li>Канцлером и Вице-канцлером;</li>
-            <li>сотрудниками Государственной разведывательной службы.</li>
-          </ul>
-        </div></div>
+      <div class="acc open"><div class="acc-h">Неприкосновенность сотрудников <span class="ar">▶</span></div>
+      <div class="acc-b">
+        <p>Сотрудник SMJ при исполнении обладает полной служебной и физической неприкосновенностью.</p>
+        <p><b>Запрещено:</b> незаконное задержание, арест, физическое воздействие.</p>
+        <p><b>Смена должности/звания:</b> только Вечный Лидер, Офис Лидера, Канцлер/Вице-канцлер, Министр юстиции (Зам), Судебный директор (Зам).</p>
+        <p><b>Снятие неприкосновенности:</b> Вечный Лидер, Офис Лидера, Канцлер, Вице-канцлер, ГРС.</p>
+      </div></div>
+      <div class="acc"><div class="acc-h">Офис министра <span class="ar">▶</span></div>
+      <div class="acc-b"><ul>
+        <li>Министр юстиции</li>
+        <li>Заместитель министра</li>
+        <li>Верховный судья</li>
+        <li>Статс-секретарь юстиции</li>
+      </ul></div></div>
+      <div class="acc"><div class="acc-h">Прокуратура (Department of Legal Affairs) <span class="ar">▶</span></div>
+      <div class="acc-b">
+        <p>Допрос, служебные расследования, проверки, запрос информации. Инициирование увольнений.</p>
+        <div class="note red"><b>Ордер.</b> Для задержаний, арестов и обысков — только по ордеру уголовной / тайной полиции.</div>
+      </div></div>
+      <div class="acc"><div class="acc-h">Legal Aid Office <span class="ar">▶</span></div>
+      <div class="acc-b">Отдел юридической помощи — минимизация процессуальных задержек.</div></div>
+      <div class="acc"><div class="acc-h">Народная судебная палата (НСП) <span class="ar">▶</span></div>
+      <div class="acc-b">Высший чрезвычайный суд. Председатель — Верховный судья. Решение не подлежит обжалованию.</div></div>
+      <div class="acc"><div class="acc-h">Greater Kelvetic Statescourt <span class="ar">▶</span></div>
+      <div class="acc-b">Общая юрисдикция до штабного командования. Инстанции: Criminal / Appellate Circuit.</div></div>
+      <div class="acc"><div class="acc-h">Комиссия по правовым стандартам <span class="ar">▶</span></div>
+      <div class="acc-b">Разработка актов, экспертиза законопроектов, трактование законов.</div></div>
+      <div class="acc"><div class="acc-h">Юрисдикция Прокуратуры и Судей <span class="ar">▶</span></div>
+      <div class="acc-b">
+        <p>Прокуратура — все фракции, кроме Гвардии Лидера, ОБК, Госканцелярии, Правительства. До генерал-майора / бригаделидера-НГ.</p>
+        <p>Судьи — все структуры. Исключения: Офис Лидера, Гвардия Лидера, ОБК, ГРС, Госканцелярия.</p>
+      </div></div>
+    </div></section>
 
-        <div class="acc"><div class="acc-h">Office of the Statesminister of Justice — Офис министра <span class="ar">▶</span></div>
-        <div class="acc-b">
-          <p>Личный аппарат главы МЮ. Обладает высшей административной юрисдикцией в сфере отправления правосудия. Состав:</p>
-          <ul>
-            <li><b>Министр юстиции</b> — руководитель ведомства;</li>
-            <li><b>Заместитель министра юстиции</b> — второй в командовании;</li>
-            <li><b>Верховный судья</b> — глава судейского корпуса (3-й в командовании);</li>
-            <li><b>Статс-секретарь юстиции</b> — глава аппарата (3-й в командовании).</li>
-          </ul>
-        </div></div>
+    <!-- ================ СУДЫ ================ -->
+    <section id="courts"><div class="card">
+      <h2>Судебная система и заседания</h2>
+      <div class="note blue"><b>Заседание</b> назначается не позже чем за 24 часа (ст. 7.1). Формы: открытое / закрытое / заочное. Возражение: «Возражаю, Ваша Честь».</div>
+      <h3>Иерархия судов</h3>
+      <table>
+        <thead><tr><th>Суд</th><th>Юрисдикция</th><th>Инстанции</th></tr></thead>
+        <tbody>
+          <tr><td class="term">Greater Kelvetic Statescourt</td><td>До штабного командования (кроме 4 ур.)</td><td>Criminal / Appellate Circuit</td></tr>
+          <tr><td class="term">Stateschamber of Peoples Justice</td><td>4 уровень + апелляции ОЧС</td><td>Единая палата</td></tr>
+          <tr><td class="term">SCM</td><td>Сухопутные и ВВС</td><td>Local / Appeal Senate</td></tr>
+          <tr><td class="term">SLC</td><td>Национальная лига и Гвардия</td><td>Local / Appeal Senate</td></tr>
+        </tbody>
+      </table>
+    </div></section>
 
-        <div class="acc"><div class="acc-h">Department of Legal Affairs — Прокуратура <span class="ar">▶</span></div>
-        <div class="acc-b">
-          <p>Офис Генерального прокурора — централизованный орган, занимающийся предварительными расследованиями и уголовным преследованием в рамках своих полномочий. Относится к правоохранительным структурам.</p>
-          <p><b>Полномочия государственных обвинителей:</b></p>
-          <ul>
-            <li>Допрашивать лиц в пределах юрисдикции;</li>
-            <li>Проводить служебные расследования, проверки и иные процессуальные действия;</li>
-            <li>Запрашивать и получать необходимую служебную информацию, документацию и доступ;</li>
-            <li>Инициировать процедуру увольнения сотрудников через командование формирований;</li>
-            <li>Защищать честь, статус и неприкосновенность Министерства юстиции законными средствами.</li>
-          </ul>
-          <div class="note red"><b>Ордер.</b> Для осуществления задержаний, арестов и обысков (получения информации) сотрудники Прокуратуры должны иметь соответствующий ордер, который выдаётся исключительно сотрудниками уголовной полиции и тайной полиции.</div>
-          <p>Материалы дел, рассматриваемые в государственных судах и LG-Leader's Court-Martial, передаются через специально установленный канал.</p>
-        </div></div>
+    <!-- ================ ЮРИСДИКЦИИ ================ -->
+    <section id="police"><div class="card">
+      <h2>Юрисдикции полицейских структур <span class="badge">Указ z.b.V. 360655</span></h2>
 
-        <div class="acc"><div class="acc-h">Legal Aid Office — Отдел юридической помощи <span class="ar">▶</span></div>
-        <div class="acc-b">
-          <p>Правовой орган, регулирующий содействие суду и правомерное поведение подсудимых. Рассматривает возможности минимизации процессуальных задержек по уголовным делам всех уровней УК.</p>
-        </div></div>
+      <div class="acc open"><div class="acc-h">Полевая полиция «Black Prince» <span class="ar">▶</span></div>
+      <div class="acc-b">
+        <p>Военнослужащие сухопутных и ВВС — от солдата до лейтенанта включительно.</p>
+        <div class="note red"><b>Примечание.</b> Полевая жандармерия — до майора включительно.</div>
+      </div></div>
+      <div class="acc"><div class="acc-h">Гражданская полиция — 12-й конный батальон <span class="ar">▶</span></div>
+      <div class="acc-b">
+        <p>Служащие НЛ и НГ — от рядового до офицерского. Гражданские — в городе.</p>
+        <div class="note red"><b>Примечание.</b> Расширение: гражданские в сельской местности.</div>
+      </div></div>
+      <div class="acc"><div class="acc-h">Патрульная служба Госгвардии <span class="ar">▶</span></div>
+      <div class="acc-b">Все служащие Госгвардии, все рода войск и гражданские вокруг резиденции Верховного Лидера.</div></div>
+      <div class="acc"><div class="acc-h">Офис безопасности Кельветии <span class="ar">▶</span></div>
+      <div class="acc-b">Все рода войск, включая Госгвардию, в любом звании.</div></div>
+      <div class="acc"><div class="acc-h">Пограничная служба НГ <span class="ar">▶</span></div>
+      <div class="acc-b">ЖД вокзал — все рода войск, кроме Госгвардии. До унтер-офицера.</div></div>
+      <div class="acc"><div class="acc-h">Срочное задержание <span class="ar">▶</span></div>
+      <div class="acc-b">До офицерского звания при отсутствии компетентных органов. Госгвардия — только передача патрульной службе.</div></div>
+    </div></section>
 
-        <div class="acc"><div class="acc-h">Stateschamber of Peoples Justice — Народная судебная палата <span class="ar">▶</span></div>
-        <div class="acc-b">
-          <p>Высший чрезвычайный судебный и правовой орган, регулирующий национальную безопасность и кадровый порядок. Оперативно рассматривает уголовные дела 4 уровня УК и апелляции ОЧС. Председатель — Верховный судья.</p>
-          <div class="note red">Решение Народной судебной палаты <b>обжалованию не подлежит</b>.</div>
-        </div></div>
+    <!-- ================ ТЕРРИТОРИИ ================ -->
+    <section id="territory"><div class="card">
+      <h2>Указ о территориальных режимах</h2>
+      <p class="sub">Z.b.V. 005 · 05.07.1945 · Канцелярия · Вице-канцлер</p>
 
-        <div class="acc"><div class="acc-h">Greater Kelvetic Statescourt — Государственный суд <span class="ar">▶</span></div>
-        <div class="acc-b">
-          <p>Судебный и правовой орган общей юрисдикции. Подсудны все дела в отношении всех лиц до штабного командования включительно (кроме дел 4 уровня). Две инстанции:</p>
-          <ul>
-            <li><b>Criminal Circuit</b> — уголовная;</li>
-            <li><b>Appellate Circuit</b> — апелляционная.</li>
-          </ul>
-        </div></div>
-
-        <div class="acc"><div class="acc-h">Statescommission of Law Standards — Комиссия по правовым стандартам <span class="ar">▶</span></div>
-        <div class="acc-b">
-          <p>Возглавляет Государственный комиссар по правовым стандартам. Также: Статс-секретарь Комиссии, члены комиссии (Commissioning Board).</p>
-          <p><b>Функции:</b></p>
-          <ul>
-            <li>Разработка проектов нормативных правовых актов государства;</li>
-            <li>Правовая экспертиза законопроектов и подзаконных актов;</li>
-            <li>Разработка предложений по совершенствованию законодательства;</li>
-            <li>Систематизация правовой системы;</li>
-            <li>Рекомендации органам власти по вопросам права;</li>
-            <li>Консультирование государственных судов и иных судебных органов;</li>
-            <li>Трактование законов и подзаконных актов.</li>
-          </ul>
-        </div></div>
-
-        <div class="acc"><div class="acc-h">Юрисдикция Прокуратуры и Судей <span class="ar">▶</span></div>
-        <div class="acc-b">
-          <p><b>Прокуратура</b> обладает юрисдикцией над всеми фракциями Кельветии, включая Вооружённые Силы, Национальную Лигу, Национальную Гвардию, а также над гражданскими лицами.</p>
-          <p><b>Исключения:</b> Гвардия Лидера, Офис безопасности Кельветии, Государственная канцелярия, Государственное правительство.</p>
-          <p>В отношении военнослужащих — до генерал-майора включительно; руководителей НГ и НЛ — до бригаделидера-НГ и старшего лидера секции НЛ включительно. В отношении лиц более высоких званий — только с разрешения Министра Юстиции либо его Офиса.</p>
-          <p><b>Государственные судьи</b> (Советники НСП, Верховный судья) обладают юрисдикцией над всеми структурами без исключений в званиях.</p>
-          <p><b>Исключения из юрисдикции судей:</b> Офис Лидера, Гвардия Лидера, Офис безопасности Кельветии, Государственная разведывательная служба, Государственная канцелярия.</p>
-          <p>Советникам НСП подсудны все граждане и служащие, за исключением Государственной канцелярии и Офиса Лидера.</p>
-        </div></div>
-      </div>
-    </section>
-
-    <!-- ================ СУДЫ И ЗАСЕДАНИЯ ================ -->
-    <section id="courts">
-      <div class="card">
-        <h2>Судебная система и заседания</h2>
-        <p class="sub">Суды, инстанции, порядок заседания, права участников</p>
-        <div class="note blue"><b>Основные ориентиры.</b> Заседание назначается не позже чем за 24 часа (ст. 7.1 Statescode of Procedure). Формы: открытое / закрытое / заочное (ст. 7.3). Возражение сторон: встать и сказать «Возражаю [протестую], Ваша Честь».</div>
-        <h3>Порядок заседания</h3>
-        <ol class="plain">
-          <li><b>Открытие.</b> Вход судьи, приветствие, проверка явки, разъяснение права на отвод, определение режима.</li>
-          <li><b>Вступительная часть.</b> Разъяснение прав, обязанностей, правил поведения, ходатайств до рассмотрения по существу.</li>
-          <li><b>Рассмотрение по существу.</b> Обвинение → позиция защиты → исследование доказательств (перекрёстные допросы) → свидетели и эксперты.</li>
-          <li><b>Прения.</b> Речь обвинителя → речь защиты → реплики → последнее слово подсудимого.</li>
-          <li><b>Приговор.</b> Совещательная комната → оглашение → разъяснение порядка обжалования → закрытие.</li>
-        </ol>
-        <h3>Иерархия судов</h3>
-        <table>
-          <thead><tr><th>Суд</th><th>Юрисдикция</th><th>Инстанции</th></tr></thead>
-          <tbody>
-            <tr><td class="term">Greater Kelvetic Statescourt</td><td>Все дела до штабного командования (кроме 4 уровня)</td><td>Criminal Circuit / Appellate Circuit</td></tr>
-            <tr><td class="term">Stateschamber of Peoples Justice (НСП)</td><td>4 уровень УК + апелляции ОЧС + нацбезопасность</td><td>Единая палата</td></tr>
-            <tr><td class="term">Statescourtmartial (SCM)</td><td>Сухопутные и военно-воздушные силы</td><td>Local / Appeal Senate</td></tr>
-            <tr><td class="term">Supreme Leaguescourt (SLC)</td><td>Национальная лига и Гвардия</td><td>Local / Appeal Senate</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- ================ ЮРИСДИКЦИИ ПОЛИЦИИ ================ -->
-    <section id="police">
-      <div class="card">
-        <h2>Юрисдикции полицейских структур <span class="badge">Указ z.b.V. 360655</span></h2>
-        <p class="sub">Офис государственного канцлера, 6 мая 1945 · с примечанием об изменении</p>
-
-        <div class="acc open"><div class="acc-h">Полевая полиция — Fieldpolice-Troop «Black Prince» <span class="ar">▶</span></div>
-        <div class="acc-b">
-          <p>Обладает юрисдикцией в отношении всех военнослужащих сухопутных и военно-воздушных сил Кельветии в званиях <b>от солдата до лейтенанта включительно</b>.</p>
-          <p>Вправе задерживать и арестовывать указанных служащих при нарушениях внутреннего устава или УК. Осуществляет контроль въезда/выезда на территориях воинских частей. Требует документы у всех лиц, кроме служащих Государственной гвардии. Обладает юрисдикцией в отношении гражданских лиц за пределами города, вправе задерживать/арестовывать при нарушении УК.</p>
-          <div class="note red"><b>Примечание к юрисдикции.</b> Государственная канцелярия совместно с Министром внутренних дел приняли решение: Полевая жандармерия обладает юрисдикцией в отношении всех военнослужащих сухопутных и военно-воздушных сил в званиях <b>от солдата до майора включительно</b>.</div>
-        </div></div>
-
-        <div class="acc"><div class="acc-h">Гражданская полиция — 12-й конный батальон <span class="ar">▶</span></div>
-        <div class="acc-b">
-          <p>Обладает юрисдикцией в отношении всех служащих Национальной лиги и Национальной гвардии в званиях <b>от рядового до офицерского звания включительно</b>, находящихся на территории города. Вправе задерживать и арестовывать при нарушениях устава или УК.</p>
-          <p>Требует документы у гражданских на территории города. Контролирует въезд/выезд, требует документы у всех служащих, кроме Государственной гвардии.</p>
-          <div class="note red"><b>Примечание.</b> Государственная канцелярия приняла решение о расширении юрисдикции Гражданской полиции: 12-й конный батальон обладает правом на задержание и арест гражданских лиц <b>в сельской местности</b>.</div>
-        </div></div>
-
-        <div class="acc"><div class="acc-h">Патрульная служба Государственной гвардии <span class="ar">▶</span></div>
-        <div class="acc-b">
-          <p>Юрисдикция в отношении всех служащих Государственной гвардии от рядового до офицерского звания включительно. Вправе задерживать и арестовывать служащих Госгвардии при нарушении закона, внутреннего устава или УК.</p>
-          <p>Обладает юрисдикцией в отношении всех родов войск и гражданских лиц вокруг резиденции Верховного Лидера. Контролирует въезд/выезд на территории резиденции.</p>
-        </div></div>
-
-        <div class="acc"><div class="acc-h">Офис безопасности Кельветии <span class="ar">▶</span></div>
-        <div class="acc-b">
-          <p>Обладает юрисдикцией в отношении всех родов войск, включая Государственную гвардию. Вправе арестовывать или задерживать служащих любых родов войск в любом звании при нарушении закона, внутренних уставов или УК.</p>
-        </div></div>
-
-        <div class="acc"><div class="acc-h">Пограничная служба Национальной гвардии <span class="ar">▶</span></div>
-        <div class="acc-b">
-          <p>Юрисдикция на территории ЖД вокзала в отношении всех родов войск, кроме Госгвардии. Сотрудники вправе задерживать и арестовывать служащих до унтер-офицерского звания включительно при нарушении УК, принудительно выводить их с территории вокзала.</p>
-          <p>Требует документы у гражданских лиц на территории вокзала и города, контролирует въезд/выезд (кроме Госгвардии).</p>
-        </div></div>
-
-        <div class="acc"><div class="acc-h">Срочное задержание через другие структуры <span class="ar">▶</span></div>
-        <div class="acc-b">
-          <p>В случае срочной необходимости сотрудники полицейских структур вправе задержать или арестовать служащего любого рода войск до офицерского звания, даже при отсутствии прямой юрисдикции, если иные компетентные органы отсутствуют.</p>
-          <p>Служащие Государственной гвардии аресту не подлежат и передаются патрульной службе Гвардии. О факте задержания следует уведомить соответствующую структуру.</p>
-          <div class="note"><b>Важно.</b> Задерживать нарушителя может только тот, у кого есть на него юрисдикция. Если у полиции нет юрисдикции, нужно передать его соответствующей структуре.</div>
-        </div></div>
-      </div>
-    </section>
-
-    <!-- ================ ТЕРРИТОРИАЛЬНЫЕ РЕЖИМЫ ================ -->
-    <section id="territory">
-      <div class="card">
-        <h2>Указ о территориальных режимах</h2>
-        <p class="sub">Канцелярия · Вице-канцлер · Указ Z.b.V. 005 · 05.07.1945</p>
-
-        <div class="acc open"><div class="acc-h">I. Воинская часть <span class="ar">▶</span></div>
-        <div class="acc-b">
-          <p><b>а)</b> Правом на постоянное нахождение на территории воинской части Великокельветского государства наделяются исключительно: сухопутные и военно-воздушные силы, медицинская служба Национальной лиги, кавалерийский штадтарт «Марш» и ударный штадтарт «Кестринг» Национальной гвардии, а также Гвардия Лидера.</p>
-          <p><b>б)</b> Нахождение на территории воинской части иных формирований, не перечисленных выше, категорически воспрещается. Данные структуры имеют право находиться на территории частей исключительно по веским причинам, включая, но не ограничиваясь: отборами, тренировками, инспекциями.</p>
-          <p><b>в)</b> Штейгсмаршал и верховное руководство вооружённых сил Великокельветии уполномочены выдавать персональные разрешения на пребывание на территории части на установленный ими срок.</p>
-          <p><b>г)</b> Ответственность за соблюдением контрольно-пропускного режима возлагается на Полевую полицию вооружённых сил.</p>
-        </div></div>
-
-        <div class="acc"><div class="acc-h">II. Аэродром <span class="ar">▶</span></div>
-        <div class="acc-b">
-          <p><b>а)</b> Правом на постоянное нахождение на территории аэродрома наделяются исключительно: военно-воздушные силы, медицинская служба Национальной лиги, полевая полиция вооружённых сил, центральный офис вооружённых сил, верховное руководство вооружённых сил.</p>
-          <p><b>б)</b> Нахождение на территории аэродрома иных формирований, не перечисленных выше, категорически воспрещается. Данные структуры имеют право находиться на территории исключительно с разрешения авиамаршала или штейгсмаршала.</p>
-          <p><b>в)</b> Ответственность за соблюдением контрольно-пропускного режима возлагается на полевую полицию вооружённых сил.</p>
-        </div></div>
-
-        <div class="acc"><div class="acc-h">III. Город и пригород <span class="ar">▶</span></div>
-        <div class="acc-b">
-          <p><b>а)</b> Правом на постоянное нахождение на территории города имеют все государственные служащие Великокельветского государства.</p>
-          <p><b>б)</b> Гражданская полиция, исходя из указа «О юрисдикциях полицейских структур» от 06/05/45, имеет высшую юрисдикцию в пределах города и пригорода.</p>
-          <p><b>в)</b> Ответственность за соблюдением контрольно-пропускного режима возлагается на пограничную службу Национальной гвардии и гражданскую полицию.</p>
-        </div></div>
-
-        <div class="acc"><div class="acc-h">IV. Штаб Гвардии Лидера <span class="ar">▶</span></div>
-        <div class="acc-b">
-          <p><b>а)</b> Правом на постоянное нахождение на территории штаба Гвардии Лидера имеют исключительно гвардейцы Гвардии Лидера.</p>
-          <p><b>б)</b> Нахождение на территории штаба иных формирований категорически воспрещается. Данные структуры имеют право находиться на территории исключительно с разрешения штейгслидера Государственной гвардии или его личного штаба.</p>
-          <p><b>в)</b> Ответственность за соблюдением контрольно-пропускного режима возлагается на полевую полицию Гвардии Лидера.</p>
-        </div></div>
-
-        <div class="acc"><div class="acc-h">V. Резиденция Вечного Лидера <span class="ar">▶</span></div>
-        <div class="acc-b">
-          <p><b>а)</b> Правом на постоянное нахождение на территории резиденции Лидера имеет исключительно Гвардия Лидера.</p>
-          <p><b>б)</b> Нахождение на территории резиденции иных формирований категорически воспрещается. Данные структуры имеют право находиться на территории исключительно с разрешения Вечного Лидера, его офиса, штейгслидера Государственной гвардии или его личного штаба.</p>
-          <p><b>в)</b> Ответственность за соблюдением контрольно-пропускного режима возлагается на полевую полицию Гвардии Лидера.</p>
-        </div></div>
-
-        <div class="acc"><div class="acc-h">VI. Исключения <span class="ar">▶</span></div>
-        <div class="acc-b">
-          <p><b>а)</b> Верховное командование имеет право на постоянное нахождение на всех территориях, за исключением резиденции Вечного Лидера.</p>
-          <p><b>б)</b> Офис безопасности Великокельветского государства имеет право на постоянное нахождение на всех территориях.</p>
-        </div></div>
-      </div>
-    </section>
+      <div class="acc open"><div class="acc-h">I. Воинская часть <span class="ar">▶</span></div>
+      <div class="acc-b">
+        <p><b>Постоянно:</b> ВС, ВВС, медслужба НЛ, штадтарты НГ «Марш» и «Кестринг», Гвардия Лидера. Иные — по веским причинам. Разрешения — штейгсмаршал / верховное руководство ВС. КПП — Полевая полиция ВС.</p>
+      </div></div>
+      <div class="acc"><div class="acc-h">II. Аэродром <span class="ar">▶</span></div>
+      <div class="acc-b">ВВС, медслужба НЛ, полевая полиция ВС, центральный офис ВС, верховное руководство ВС. Иные — с разрешения авиамаршала / штейгсмаршала.</div></div>
+      <div class="acc"><div class="acc-h">III. Город и пригород <span class="ar">▶</span></div>
+      <div class="acc-b">Все госслужащие. Высшая юрисдикция — Гражданская полиция. КПП — Пограничная служба НГ и Гражданская полиция.</div></div>
+      <div class="acc"><div class="acc-h">IV. Штаб Гвардии Лидера <span class="ar">▶</span></div>
+      <div class="acc-b">Только гвардейцы. Иные — с разрешения штейгслидера Госгвардии. КПП — Полевая полиция Гвардии Лидера.</div></div>
+      <div class="acc"><div class="acc-h">V. Резиденция Вечного Лидера <span class="ar">▶</span></div>
+      <div class="acc-b">Только Гвардия Лидера. Иные — с разрешения Вечного Лидера / его офиса / штейгслидера Госгвардии.</div></div>
+      <div class="acc"><div class="acc-h">VI. Исключения <span class="ar">▶</span></div>
+      <div class="acc-b">Верховное командование — все территории, кроме резиденции. ОБК — все территории.</div></div>
+    </div></section>
 
     <!-- ================ УКАЗЫ ================ -->
-    <section id="decrees">
-      <div class="card">
-        <h2>Указы и распоряжения правительства</h2>
-        <p class="sub">Действующие указы Канцелярии, Офиса Лидера и смежных органов · разверни для полного текста</p>
-        <div id="decreeBox"></div>
-      </div>
-    </section>
+    <section id="decrees"><div class="card">
+      <h2>Указы и распоряжения правительства</h2>
+      <p class="sub">Действующие указы Канцелярии, Офиса Лидера и смежных органов · разверни для полного текста</p>
+      <div id="decreeBox"></div>
+    </div></section>
 
-    <!-- ================ ВИДЫ НАКАЗАНИЙ ================ -->
-    <section id="penalties">
-      <div class="card">
-        <h2>Виды наказаний <span class="badge">Ст. 4.6 Statescode of Procedure</span></h2>
-        <p class="sub">Что может назначить суд по итогам уголовного процесса</p>
-        <table>
-          <thead><tr><th>Наказание</th><th>Пояснение</th></tr></thead>
-          <tbody>
-            <tr><td class="term">Предупреждение</td><td>Устное/письменное</td></tr>
-            <tr><td class="term">Лишение свободы (арест)</td><td>На определённый срок — обычно до 500 секунд</td></tr>
-            <tr><td class="term">Выговор в подразделении</td><td>Дисциплинарное взыскание</td></tr>
-            <tr><td class="term">Фракционный выговор</td><td>Взыскание на уровне фракции</td></tr>
-            <tr><td class="term">Исключение из подразделения</td><td>Возможно с лишением званий, наград и привилегий, с ЧС подразделения</td></tr>
-            <tr><td class="term">Исключение из фракции</td><td>Возможно с лишением званий, наград, привилегий и ЧС фракции</td></tr>
-            <tr><td class="term">Чёрный список подразделения</td><td>Возможно с баном</td></tr>
-            <tr><td class="term">Чёрный список верховного/штабного/полевого командования</td><td>Отдельная категория ЧС</td></tr>
-            <tr><td class="term">Чёрный список фракции</td><td>Возможно с баном</td></tr>
-            <tr><td class="term">Чёрный список фракций</td><td>Возможно с баном</td></tr>
-            <tr><td class="term">Общегосударственный Чёрный список (ОЧС)</td><td>Высшая мера</td></tr>
-            <tr><td class="term">Лишение права занимать определённые должности / заниматься деятельностью</td><td>Ограничение на срок</td></tr>
-            <tr><td class="term">Лишение права занимать любую должность в госорганизации</td><td>Полный запрет</td></tr>
-            <tr><td class="term">Мут</td><td>До 7 дней</td></tr>
-            <tr><td class="term">Временная блокировка аккаунта (бан)</td><td>До 30 / до 90 дней</td></tr>
-          </tbody>
-        </table>
-        <div class="note blue"><b>Ст. 4.6.1. Гибкость.</b> Степень наказания в статьях может быть изменена судом — в пределах, установленных статьёй.</div>
-        <div class="note red"><b>Ст. 4.7. Пределы.</b> Наказание не может превышать максимум, установленный в конкретной статье. <b>Исключение:</b> террористический акт — на усмотрение Верховного судьи.</div>
-      </div>
-    </section>
+    <!-- ================ НАКАЗАНИЯ ================ -->
+    <section id="penalties"><div class="card">
+      <h2>Виды наказаний <span class="badge">Ст. 4.6 Statescode of Procedure</span></h2>
+      <table>
+        <thead><tr><th>Наказание</th><th>Пояснение</th></tr></thead>
+        <tbody>
+          <tr><td class="term">Предупреждение</td><td>Устное / письменное</td></tr>
+          <tr><td class="term">Арест</td><td>До 500 секунд</td></tr>
+          <tr><td class="term">Выговор в подразделении</td><td>Дисциплинарное взыскание</td></tr>
+          <tr><td class="term">Фракционный выговор</td><td>Взыскание на уровне фракции</td></tr>
+          <tr><td class="term">Исключение из подразделения / фракции</td><td>Возможно с лишением званий, наград, привилегий</td></tr>
+          <tr><td class="term">ЧС подразделения / фракции / фракций</td><td>Возможно с баном</td></tr>
+          <tr><td class="term">ЧС верховного / штабного / полевого командования</td><td>Отдельная категория</td></tr>
+          <tr><td class="term">ОЧС</td><td>Высшая мера</td></tr>
+          <tr><td class="term">Лишение права занимать должности</td><td>Ограничение / полный запрет</td></tr>
+          <tr><td class="term">Мут</td><td>До 7 дней</td></tr>
+          <tr><td class="term">Бан</td><td>До 30 / до 90 дней</td></tr>
+        </tbody>
+      </table>
+      <div class="note blue"><b>Ст. 4.6.1.</b> Суд может изменить степень наказания в пределах статьи.</div>
+      <div class="note red"><b>Ст. 4.7.</b> Предел — не выше максимума. Исключение: теракт.</div>
+    </div></section>
 
     <!-- ================ ПАМЯТКИ ================ -->
-    <section id="memo">
+    <section id="memo"><div class="card">
+      <h2>Памятки и типичные ошибки</h2>
+      <h3>Топ-10 ошибок при задержании</h3>
+      <ol class="plain">
+        <li><b>Задержание без юрисдикции.</b> Проверь по указу о юрисдикциях.</li>
+        <li><b>Арест служащего Госгвардии.</b> Аресту не подлежат — передаются патрульной службе.</li>
+        <li><b>Игнорирование неприкосновенности МЮ.</b> Снять могут только Офис Лидера, Канцлер, Вице-канцлер, ГРС.</li>
+        <li><b>Задержание без ордера (Прокуратурой).</b> Только по ордеру уголовной / тайной полиции.</li>
+        <li><b>Нарушение «двойной службы».</b> Нельзя штабные должности в двух подразделениях.</li>
+        <li><b>Игнорирование территориальных режимов.</b></li>
+        <li><b>Нарушение охраны нравственности.</b> Вплоть до ОЧС.</li>
+        <li><b>Разглашение секретных сведений.</b> Confidential / Secret / Top Secret.</li>
+        <li><b>Неуважение к суду.</b> CR 1.20 / 2.20 / 3.19.</li>
+        <li><b>Неисполнение судебных актов.</b> Ст. 4.18 (CR).</li>
+      </ol>
+      <h3>Обращения к суду</h3>
+      <div class="note blue"><b>Возражение:</b> «Возражаю [протестую], Ваша Честь». После разрешения судьи — объяснить суть.</div>
+      <div class="note blue"><b>Обращение:</b> «Ваша Честь». Запрещено: разговаривать, шуметь, курить, иметь оружие/броню.</div>
+    </div></section>
+
+    <!-- ================ АНОНИМНОЕ ОБРАЩЕНИЕ ================ -->
+    <section id="report">
       <div class="card">
-        <h2>Памятки и типичные ошибки</h2>
+        <h2>📩 Анонимное обращение <span class="badge">о действии / бездействии</span></h2>
+        <p class="sub">Форма для сообщения о действии или бездействии высокопоставленного лица. Отправка полностью анонимна — мы не запрашиваем ваш ник, IP-адрес не сохраняется в заявке. Заявка уходит напрямую в закрытый канал уполномоченных лиц.</p>
 
-        <h3>Топ-10 ошибок при задержании</h3>
-        <ol class="plain">
-          <li><b>Задержание без юрисдикции.</b> Проверь по указу о юрисдикциях, имеешь ли ты право задерживать этого служащего. Если нет — передай соответствующей структуре.</li>
-          <li><b>Арест служащего Госгвардии.</b> Служащие Государственной гвардии аресту не подлежат — передаются патрульной службе Гвардии.</li>
-          <li><b>Игнорирование неприкосновенности МЮ.</b> Любой сотрудник SMJ при исполнении обладает полной неприкосновенностью. Снять её могут только: Офис Лидера, Канцлер, Вице-канцлер, ГРС.</li>
-          <li><b>Задержание без ордера (Прокуратурой).</b> Для задержаний, арестов и обысков Прокуратуре требуется ордер от уголовной/тайной полиции.</li>
-          <li><b>Нарушение правила «двойной службы».</b> Нельзя занимать штабные должности в двух подразделениях одновременно.</li>
-          <li><b>Игнорирование территориальных режимов.</b> Смотри указ о территориальных режимах — где ты имеешь право находиться.</li>
-          <li><b>Нарушение охраны нравственности.</b> Онлайн-отношения, груминг, любой сексуальный контент в цифровой среде — запрещены, наказание вплоть до ОЧС.</li>
-          <li><b>Разглашение секретных сведений.</b> Confidential / Secret / Top Secret — разные уровни ответственности.</li>
-          <li><b>Неуважение к суду.</b> Оскорбление участников заседания — (CR) статья 1.20 / 2.20 / 3.19.</li>
-          <li><b>Неисполнение судебных актов.</b> Ст. 4.18 (CR) — злостное неисполнение приговора/решения/ордера влечёт до ОЧС.</li>
-        </ol>
+        <div class="note red">
+          <b>Внимание.</b> Заведомо ложное обращение — это преступление (ст. 1.8 / 2.8 / 3.8 УК — «Клевета с обвинением в преступлении»). Отправляя форму, вы подтверждаете, что сведения достоверны. Форма защищена от спама и ботов.
+        </div>
 
-        <h3>Обращения к суду</h3>
-        <div class="note blue"><b>Возражение:</b> встать и сказать «Возражаю [протестую], Ваша Честь». После разрешения судьи — объяснить суть. Судья может принять или отклонить.</div>
-        <div class="note blue"><b>Обращение к судье:</b> «Ваша Честь». Запрещено: разговаривать, шуметь, курить, перемещаться без разрешения, иметь оружие/броню.</div>
+        <form id="reportForm" autocomplete="off">
+          <div class="calc-row">
+            <div class="field" style="flex:1;min-width:260px">
+              <label>Объект обращения *</label>
+              <input type="text" name="target" required maxlength="300" placeholder="Должность / звание лица, на которое жалуетесь">
+            </div>
+            <div class="field" style="min-width:220px">
+              <label>Дата и время инцидента</label>
+              <input type="text" name="date" maxlength="200" placeholder="Например: 02.10.2026, 20:30 МСК">
+            </div>
+          </div>
 
-        <h3>Права и обязанности сторон (ст. 8.2 Statescode of Procedure)</h3>
-        <h4>Права:</h4>
+          <div class="field" style="margin-bottom:16px">
+            <label>Статьи УК (если знаете)</label>
+            <input type="text" name="articles" maxlength="500" placeholder="Например: ст. 2.16 (Превышение полномочий), ст. 3.15">
+          </div>
+
+          <div class="field" style="margin-bottom:16px">
+            <label>Что произошло * <span style="text-transform:none;font-weight:400;color:var(--muted)">(минимум 30 символов)</span></label>
+            <textarea name="description" required minlength="30" maxlength="4000" rows="8"
+              placeholder="Опишите подробно: что сделал или чего не сделал человек, при каких обстоятельствах, кто ещё присутствовал, какие последствия."></textarea>
+          </div>
+
+          <div class="field" style="margin-bottom:16px">
+            <label>Ссылки на доказательства</label>
+            <textarea name="evidence" maxlength="2000" rows="3"
+              placeholder="Ссылки на скрины, видео, логи (каждая — с новой строки)"></textarea>
+          </div>
+
+          <!-- Honeypot (невидим для людей) -->
+          <div style="position:absolute;left:-9999px;top:-9999px" aria-hidden="true">
+            <label>Не заполняйте это поле<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+          </div>
+
+          <label style="display:flex;gap:10px;align-items:flex-start;font-size:13.5px;margin:16px 0;cursor:pointer">
+            <input type="checkbox" name="confirmed" required style="margin-top:3px;width:16px;height:16px;flex:0 0 auto">
+            <span>Подтверждаю, что сведения достоверны и обращение осознанное. Понимаю, что за заведомо ложный донос предусмотрена уголовная ответственность.</span>
+          </label>
+
+          <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+            <button type="submit" class="btn primary" id="reportBtn" style="padding:11px 22px;font-size:14px">Отправить анонимно</button>
+            <span id="reportStatus" style="font-size:13.5px;color:var(--muted)"></span>
+          </div>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Как это работает</h2>
         <ul class="plain">
-          <li>Знакомиться с материалами дела;</li>
-          <li>Заявлять ходатайства и отводы;</li>
-          <li>Высказывать аргументы и мнение;</li>
-          <li>Представлять и оспаривать доказательства;</li>
-          <li>Знакомиться с ходатайствами других лиц;</li>
-          <li>Возражать во время всего заседания (кроме вступительной и заключительной речи);</li>
-          <li>Знать о принятых судебных актах.</li>
+          <li><b>Полная анонимность.</b> Мы не запрашиваем ваш ник, IP-адрес не сохраняется в заявке.</li>
+          <li><b>Защищённая передача.</b> Данные уходят через прокси Cloudflare — напрямую в закрытый канал уполномоченных лиц.</li>
+          <li><b>Защита от спама.</b> Форма принимает не более одной заявки в минуту с одного устройства.</li>
+          <li><b>Что приходит в заявке:</b> объект обращения, дата, статьи, описание, доказательства.</li>
         </ul>
-        <h4>Обязанности:</h4>
-        <ul class="plain">
-          <li>Посещать заседания или уведомлять о причинах неявки;</li>
-          <li>Соблюдать сроки подачи заявлений;</li>
-          <li>Иметь актуальный Discord;</li>
-          <li>Соблюдать нормы этики;</li>
-          <li>Приходить вовремя — иначе неуважение к Суду.</li>
-        </ul>
+        <div class="note blue">
+          <b>Совет.</b> Чем подробнее описание и чем больше доказательств — тем выше шанс, что по обращению будет проведена проверка.
+        </div>
       </div>
     </section>
 
@@ -749,155 +571,155 @@ html[data-theme=dark] #toTop{background:#4b8ee0}
 
 <script>
 /* ============================================================
-   ДАННЫЕ: УГОЛОВНЫЙ КОДЕКС
+   ДАННЫЕ: УК
    ============================================================ */
 const CRIMES = {
-  1: [
-    {n:'1.1', t:'Умышленное причинение вреда здоровью', d:'Умышленное и/или неоднократное нанесение телесных повреждений лёгкой или средней степени тяжести.', p:'Предупреждение, арест (до 500 секунд)'},
-    {n:'1.2', t:'Убийство (простое)', d:'Умышленное причинение смерти другому человеку и/или нанесение телесных повреждений тяжёлой степени (от которых человек может умереть).', p:'Предупреждение, арест (до 500 секунд)'},
-    {n:'1.3', t:'Причинение тяжкого вреда здоровью по неосторожности', d:'Причинение тяжкого вреда здоровью случайно, без умысла.', p:'Предупреждение, арест (до 500 секунд)'},
-    {n:'1.4', t:'Причинение смерти по неосторожности', d:'Причинение смерти другому человеку случайно, без желания убивать.', p:'Предупреждение, арест (до 500 секунд)'},
-    {n:'1.5', t:'Угрозы причинения вреда', d:'Устные, письменные или иные высказывания/действия, обещающие причинить вред жизни, здоровью, имуществу или законным интересам. Наказуемы, если потерпевший имел разумные основания воспринимать угрозу как реальную.', p:'Предупреждение, арест (до 500 секунд)'},
-    {n:'1.6', t:'Похищение человека', d:'Захват человека, его перемещение и удержание против его воли.', p:'Предупреждение, арест (до 500 секунд)'},
-    {n:'1.7', t:'Простая клевета', d:'Распространение заведомо ложных сведений, порочащих честь и достоинство другого лица или подрывающих его репутацию.', p:'Предупреждение, арест (до 500 секунд)'},
-    {n:'1.8', t:'Клевета с обвинением в преступлении', d:'Клевета, соединённая с обвинением лица в совершении преступления (ложный донос).', p:'Предупреждение, арест (до 500 секунд)'},
-    {n:'1.9', t:'Ложное сообщение об опасности', d:'Заведомо ложное сообщение о готовящемся взрыве, поджоге или иных действиях, создающих опасность для людей или имущества.', p:'Предупреждение, арест (до 500 секунд)'},
-    {n:'1.10', t:'Хулиганство', d:'Грубое нарушение общественного порядка, явное неуважение к обществу — с оружием/предметами как оружие; по мотивам ненависти; либо неоднократное и злостное мелкое хулиганство.', p:'Предупреждение, арест (до 500 секунд)'},
-    {n:'1.11', t:'Охраняемая территория', d:'Незаконное нахождение на охраняемой территории: Государственная канцелярия, ЖД вокзал (рабочее пространство, ограждённая зона), участок Гражданской полиции.', p:'Предупреждение, арест (до 500 секунд)'},
-    {n:'1.12', t:'Закрытая территория', d:'Незаконное проникновение или нахождение на закрытой территории: военная часть, авиабаза, штаб Государственной гвардии.', p:'Предупреждение, арест (до 500 секунд)'},
-    {n:'1.13', t:'Режимный объект особой важности', d:'Проникновение на объект особой важности: Резиденция Верховного лидера, здание суда (кроме суда/мероприятий), замок Офиса безопасности Кельветии.', p:'Предупреждение, арест (до 500 секунд)'},
-    {n:'1.14', t:'Незаконный оборот оружия', d:'Приобретение, передача, сбыт, хранение, перевозка, ношение или использование любого оружия, бронежилетов, боеприпасов с нарушением закона.', p:'Предупреждение, арест (до 500 секунд)'},
-    {n:'1.15', t:'Незаконный оборот взрывчатки', d:'Приобретение, передача, сбыт, хранение, перевозка, изготовление или ношение взрывчатых веществ или устройств.', p:'Предупреждение, арест (до 500 секунд)'},
-    {n:'1.16', t:'Посягательство на жизнь государственного деятеля', d:'Покушение на жизнь государственного или общественного деятеля с целью прекратить его политическую деятельность или из мести.', p:'Предупреждение, арест (до 500 секунд)'},
-    {n:'1.17', t:'Разглашение секретных сведений', d:'Разглашение защищённой законом информации лицом, которому она была доверена. Часть 1 — Confidential (предупреждение, арест); Часть 2 — Secret (предупреждение, арест до 500 секунд).', p:'Предупреждение, арест (до 500 секунд)'},
-    {n:'1.18', t:'Присвоение полномочий должностного лица', d:'Самовольное присвоение гражданином полномочий должностного лица, повлёкшее нарушение прав граждан или организаций.', p:'Предупреждение, арест (до 500 секунд)'},
-    {n:'1.19', t:'Воспрепятствование государственному служащему', d:'Активные действия, мешающие госслужащему: физическое блокирование, вмешательство в процесс, подстрекательство других, создание конфликтов, иные действия, реально затруднившие исполнение обязанностей. Слова, критика, эмоции — не считаются преступлением.', p:'Предупреждение, арест (до 500 секунд)'},
-    {n:'1.20', cr:true, t:'Неуважение к суду', d:'Неуважение к суду, включая оскорбление участников судебного разбирательства.', p:'Предупреждение, арест (до 500 секунд)'},
-    {n:'1.21', t:'Уклонение от следствия и суда', d:'Попытка скрыться при публикации ордеров; неявка по вызову прокурора или следователя; смена фамилии или документов (рб ник); попытка избежать суда без веских причин.', p:'Предупреждение, арест (до 500 секунд)'},
-    {n:'1.22', t:'Укрывательство преступлений', d:'Сокрытие преступника или любых средств/улик, которые могли бы помочь следствию или суду.', p:'Предупреждение, арест (до 500 секунд)'},
-    {n:'1.23', t:'Неисполнение актов представителем власти', d:'Неисполнение представителем власти вступивших в силу приговора, решения суда или иного нормативного акта, а равно воспрепятствование их исполнению.', p:'Предупреждение, арест (до 500 секунд)'},
-    {n:'1.25', t:'Оскорбление', d:'Унижение чести и достоинства в виде высказываний (устно/письменно) или действий. В отличие от клеветы, не требует ложных сведений — просто негативная оценка в неприличной форме.', p:'Предупреждение, арест (до 500 секунд)'},
-    {n:'1.26', t:'Самоуправство', d:'Самовольное совершение каких-либо действий вопреки установленному законом порядку. Применяется только к лицам, не состоящим на госслужбе.', p:'Предупреждение, арест (до 500 секунд)'},
-    {n:'1.27', t:'Неподчинение законным требованиям', d:'Неподчинение или злонамеренное игнорирование законных требований сотрудников правоохранительных структур или прокуратуры.', p:'Предупреждение, арест'},
-    {n:'1.28', t:'Укрывательство преступника и улик', d:'Сокрытие преступника, орудий преступления, следов или предметов, добытых преступлением.', p:'Предупреждение, арест (до 500 секунд)'},
-    {n:'1.29', t:'Помеха задержанию', d:'Незаконное создание помех при задержании, помощь в уходе задержанного/преследуемого/арестованного.', p:'Предупреждение, арест (до 500 секунд)'},
-    {n:'1.30', t:'Побег при задержании', d:'Побег во время задержания.', p:'Предупреждение, арест (до 500 секунд)'},
-    {n:'1.31', t:'Распространение запрещённого контента', d:'Создание, хранение с целью распространения либо распространение материалов: содержащих сцены жестокости/насилия/смерти для шока; пропаганда сексуальных отношений с несовершеннолетними; сцены сексуального насилия, насилия над животными, некрофильного характера; доксинг.', p:'За п.1 — предупреждение или мут до 7 дней; за п.2,3,4 — ОЧС'},
-    {n:'1.32', t:'Жестокое обращение с животными и зоофилия', d:'Совершение действий сексуального характера с животными; организация или содействие; публичная пропаганда, оправдание или распространение материалов.', p:'Предупреждение, арест, мут до 7 дней, временная блокировка'},
-    {n:'1.33', t:'Деструктивное поведение', d:'Грубое нарушение общественного порядка: флуд в официальных каналах после предупреждения; травля (буллинг) вне ролевого контекста; умышленное создание конфликтов для срыва мероприятий.', p:'Предупреждение; повторно — мут до 7 дней; системно — бан до 30 дней'},
-    {n:'1.34', t:'Нарушение правил вождения авто/мототранспорта', d:'Нарушение правил вождения или эксплуатации грузовой/автомобильной машины или мотоцикла, повлёкшее угрозу здоровью/жизни человека или общественной безопасности.', p:'Предупреждение, арест'}
+  1:[
+    {n:'1.1',t:'Умышленное причинение вреда здоровью',d:'Умышленное и/или неоднократное нанесение телесных повреждений лёгкой или средней степени тяжести.',p:'Предупреждение, арест (до 500 секунд)'},
+    {n:'1.2',t:'Убийство (простое)',d:'Умышленное причинение смерти и/или телесных повреждений тяжёлой степени.',p:'Предупреждение, арест (до 500 секунд)'},
+    {n:'1.3',t:'Причинение тяжкого вреда здоровью по неосторожности',d:'Случайно, без умысла.',p:'Предупреждение, арест (до 500 секунд)'},
+    {n:'1.4',t:'Причинение смерти по неосторожности',d:'Случайно, без желания убивать.',p:'Предупреждение, арест (до 500 секунд)'},
+    {n:'1.5',t:'Угрозы причинения вреда',d:'Устные, письменные или иные высказывания, обещающие вред. Наказуемы, если потерпевший воспринимал угрозу как реальную.',p:'Предупреждение, арест (до 500 секунд)'},
+    {n:'1.6',t:'Похищение человека',d:'Захват, перемещение и удержание против воли.',p:'Предупреждение, арест (до 500 секунд)'},
+    {n:'1.7',t:'Простая клевета',d:'Распространение заведомо ложных сведений, порочащих честь и достоинство.',p:'Предупреждение, арест (до 500 секунд)'},
+    {n:'1.8',t:'Клевета с обвинением в преступлении',d:'Клевета с обвинением лица в совершении преступления (ложный донос).',p:'Предупреждение, арест (до 500 секунд)'},
+    {n:'1.9',t:'Ложное сообщение об опасности',d:'Заведомо ложное сообщение о взрыве, поджоге, иных опасных действиях.',p:'Предупреждение, арест (до 500 секунд)'},
+    {n:'1.10',t:'Хулиганство',d:'Грубое нарушение общественного порядка с оружием / по мотивам ненависти / злостное.',p:'Предупреждение, арест (до 500 секунд)'},
+    {n:'1.11',t:'Охраняемая территория',d:'Госканцелярия, ЖД вокзал, участок Гражданской полиции.',p:'Предупреждение, арест (до 500 секунд)'},
+    {n:'1.12',t:'Закрытая территория',d:'Воинская часть, авиабаза, штаб Госгвардии.',p:'Предупреждение, арест (до 500 секунд)'},
+    {n:'1.13',t:'Режимный объект особой важности',d:'Резиденция Верховного лидера, здание суда, замок ОБК.',p:'Предупреждение, арест (до 500 секунд)'},
+    {n:'1.14',t:'Незаконный оборот оружия',d:'Оружие, бронежилеты, боеприпасы с нарушением закона.',p:'Предупреждение, арест (до 500 секунд)'},
+    {n:'1.15',t:'Незаконный оборот взрывчатки',d:'ВВ и устройства с нарушением закона.',p:'Предупреждение, арест (до 500 секунд)'},
+    {n:'1.16',t:'Посягательство на жизнь государственного деятеля',d:'Покушение на жизнь госдеятеля.',p:'Предупреждение, арест (до 500 секунд)'},
+    {n:'1.17',t:'Разглашение секретных сведений',d:'Confidential / Secret.',p:'Предупреждение, арест (до 500 секунд)'},
+    {n:'1.18',t:'Присвоение полномочий должностного лица',d:'Самовольное присвоение полномочий.',p:'Предупреждение, арест (до 500 секунд)'},
+    {n:'1.19',t:'Воспрепятствование госслужащему',d:'Активные действия, мешающие работе. Слова, критика, эмоции — не считаются.',p:'Предупреждение, арест (до 500 секунд)'},
+    {n:'1.20',cr:true,t:'Неуважение к суду',d:'Оскорбление участников судебного разбирательства.',p:'Предупреждение, арест (до 500 секунд)'},
+    {n:'1.21',t:'Уклонение от следствия и суда',d:'Скрыться, неявка, смена ника, смена скина.',p:'Предупреждение, арест (до 500 секунд)'},
+    {n:'1.22',t:'Укрывательство преступлений',d:'Сокрытие преступника или улик.',p:'Предупреждение, арест (до 500 секунд)'},
+    {n:'1.23',t:'Неисполнение актов представителем власти',d:'Неисполнение приговора / решения суда.',p:'Предупреждение, арест (до 500 секунд)'},
+    {n:'1.25',t:'Оскорбление',d:'Унижение чести и достоинства в неприличной форме.',p:'Предупреждение, арест (до 500 секунд)'},
+    {n:'1.26',t:'Самоуправство',d:'Самовольные действия вопреки порядку. Только для не-госслужащих.',p:'Предупреждение, арест (до 500 секунд)'},
+    {n:'1.27',t:'Неподчинение законным требованиям',d:'Игнорирование требований ПО / Прокуратуры.',p:'Предупреждение, арест'},
+    {n:'1.28',t:'Укрывательство преступника и улик',d:'Сокрытие преступника, орудий, следов.',p:'Предупреждение, арест (до 500 секунд)'},
+    {n:'1.29',t:'Помеха задержанию',d:'Помощь в уходе задержанного.',p:'Предупреждение, арест (до 500 секунд)'},
+    {n:'1.30',t:'Побег при задержании',d:'Побег во время задержания.',p:'Предупреждение, арест (до 500 секунд)'},
+    {n:'1.31',t:'Распространение запрещённого контента',d:'Жестокость/насилие/смерть для шока, пропаганда, доксинг.',p:'За п.1 — предупреждение или мут до 7 дней; за п.2,3,4 — ОЧС'},
+    {n:'1.32',t:'Жестокое обращение с животными и зоофилия',d:'Сексуальные действия с животными, пропаганда.',p:'Предупреждение, арест, мут до 7 дней, бан'},
+    {n:'1.33',t:'Деструктивное поведение',d:'Флуд, буллинг, срыв мероприятий.',p:'Предупреждение; повторно — мут; системно — бан до 30 дней'},
+    {n:'1.34',t:'Нарушение правил вождения',d:'Угроза здоровью/жизни.',p:'Предупреждение, арест'}
   ],
-  2: [
-    {n:'2.1', t:'Умышленное причинение вреда здоровью', d:'Умышленное и/или неоднократное нанесение телесных повреждений лёгкой или средней степени тяжести.', p:'Предупреждение, арест, выговор в подразделении'},
-    {n:'2.2', t:'Убийство (простое)', d:'Умышленное причинение смерти другому человеку и/или телесных повреждений тяжёлой степени.', p:'Предупреждение, арест, выговор в подразделении'},
-    {n:'2.3', t:'Причинение тяжкого вреда здоровью по неосторожности', d:'Причинение тяжкого вреда здоровью случайно, без умысла.', p:'Предупреждение, арест, выговор в подразделении'},
-    {n:'2.4', t:'Причинение смерти по неосторожности', d:'Причинение смерти другому человеку случайно.', p:'Предупреждение, арест, выговор в подразделении'},
-    {n:'2.5', t:'Угрозы причинения вреда', d:'Угрозы причинения вреда жизни, здоровью, имуществу или законным интересам.', p:'Предупреждение, арест, выговор в подразделении'},
-    {n:'2.6', t:'Похищение человека', d:'Захват, перемещение и удержание против воли.', p:'Предупреждение, арест, выговор в подразделении'},
-    {n:'2.7', t:'Простая клевета', d:'Распространение заведомо ложных сведений, порочащих честь и достоинство.', p:'Предупреждение, арест, выговор в подразделении'},
-    {n:'2.8', t:'Клевета с обвинением в преступлении', d:'Ложный донос о совершении преступления.', p:'Предупреждение, арест, выговор в подразделении'},
-    {n:'2.10', t:'Ложное сообщение об опасности', d:'Заведомо ложное сообщение о взрыве, поджоге, иных опасных действиях.', p:'Предупреждение, арест, выговор в подразделении'},
-    {n:'2.11', t:'Хулиганство', d:'Грубое нарушение общественного порядка с оружием / по мотивам ненависти / злостное.', p:'Предупреждение, арест, выговор в подразделении'},
-    {n:'2.12', t:'Закрытая территория', d:'Проникновение на военную часть, авиабазу, штаб Государственной гвардии.', p:'Предупреждение, арест, выговор в подразделении'},
-    {n:'2.13', t:'Режимный объект особой важности', d:'Проникновение на Резиденцию Верховного лидера, здание суда (не в момент суда), замок ОБК.', p:'Предупреждение, арест, выговор в подразделении'},
-    {n:'2.14', t:'Посягательство на жизнь государственного деятеля', d:'Покушение на жизнь госдеятеля с целью прекратить политическую деятельность.', p:'Предупреждение, арест, выговор в подразделении'},
-    {n:'2.15', t:'Разглашение секретных сведений', d:'Confidential (ч.1) — предупреждение, арест, выговор. Secret (ч.2) — + фракционный выговор. Адвокатская тайна (ч.3) — предупреждение, арест, выговор.', p:'Предупреждение, арест, выговор, фракционный выговор'},
-    {n:'2.16', cr:true, t:'Превышение полномочий', d:'Должностное лицо совершает действия, явно выходящие за пределы его полномочий, что нарушает права граждан или организаций.', p:'Предупреждение, арест, выговор, фракционный выговор, исключение из подразделения, исключение из фракции'},
-    {n:'2.17', t:'Неисполнение приказа', d:'Неисполнение подчинённым законного приказа начальника, причинившее существенный вред интересам службы.', p:'Предупреждение, арест, выговор в подразделении'},
-    {n:'2.18', t:'Халатность', d:'Ч.1 — простая халатность (неисполнение/плохое исполнение обязанностей из-за небрежности). Ч.2 — халатность с тяжкими последствиями (тяжкий вред здоровью или смерть по неосторожности).', p:'Ч.1 — предупреждение, арест, выговор, фракционный выговор, исключение; Ч.2 — + ЧС фракции, ЧС фракций'},
-    {n:'2.19', t:'Воспрепятствование госслужащему', d:'Активные действия, мешающие работе госслужащего. Слова, критика, эмоции — не считаются.', p:'Предупреждение, арест, выговор, фракционный выговор'},
-    {n:'2.20', t:'Неуважение к суду', d:'Оскорбление участников судебного разбирательства.', p:'Предупреждение, арест, выговор, фракционный выговор'},
-    {n:'2.21', t:'Незаконное задержание', d:'Заведомо незаконное задержание, заключение под стражу или содержание под стражей.', p:'Предупреждение, арест, выговор, фракционный выговор'},
-    {n:'2.22', t:'Фальсификация доказательств', d:'Фальсификация доказательств по гражданскому или административному делу лицом, участвующим в деле, или его представителем.', p:'Предупреждение, арест, выговор, фракционный выговор, исключение из подразделения, исключение из фракции'},
-    {n:'2.23', t:'Ложные показания', d:'Заведомо ложные показания свидетеля, потерпевшего, заключение или показания эксперта, специалиста в суде.', p:'Предупреждение, арест, выговор в подразделении'},
-    {n:'2.24', t:'Уклонение от следствия и суда', d:'Попытка скрыться при публикации ордеров; неявка по вызову; смена ника/документов; изменение внешности (скин); попытка избежать суда.', p:'Предупреждение, арест, выговор в подразделении'},
-    {n:'2.25', t:'Укрывательство преступлений', d:'Сокрытие преступника, средств, улик.', p:'Предупреждение, арест, выговор в подразделении'},
-    {n:'2.26', t:'Неисполнение актов представителем власти', d:'Неисполнение вступивших в силу приговора, решения суда или акта.', p:'Предупреждение, арест, выговор в подразделении'},
-    {n:'2.27', t:'Посягательство на жизнь сотрудника правоохранительных органов', d:'Посягательство на жизнь полицейского, военного или их близких в связи со службой.', p:'Предупреждение, арест, выговор в подразделении'},
-    {n:'2.28', t:'Оскорбление', d:'Унижение чести и достоинства в виде высказываний или действий.', p:'Предупреждение, арест, выговор в подразделении'},
-    {n:'2.29', t:'Неподчинение законным требованиям', d:'Неподчинение или злонамеренное игнорирование законных требований сотрудников ПО или Прокуратуры.', p:'Предупреждение, арест, выговор в подразделении'},
-    {n:'2.30', t:'Укрывательство преступника и улик', d:'Сокрытие преступника, орудий, следов.', p:'Предупреждение, арест, выговор в подразделении'},
-    {n:'2.31', t:'Помеха задержанию', d:'Создание помех при задержании, помощь в уходе задержанного.', p:'Предупреждение, арест, выговор в подразделении'},
-    {n:'2.32', t:'Побег при задержании', d:'Побег во время задержания.', p:'Предупреждение, арест, выговор в подразделении'},
-    {n:'2.33', t:'Неисполнение приказа', d:'Неисполнение подчинённым законного приказа начальника.', p:'Предупреждение, арест, выговор в подразделении'},
-    {n:'2.34', t:'Нарушение правил вождения военной техники', d:'Нарушение правил вождения боевой, специальной или транспортной машины, повлёкшее тяжкий вред здоровью.', p:'Предупреждение, арест, выговор в подразделении'},
-    {n:'2.35', t:'Нарушение правил полётов', d:'Нарушение правил полётов, подготовки к ним или эксплуатации военных летательных аппаратов, повлёкшее тяжкие последствия.', p:'Предупреждение, арест, выговор в подразделении'},
-    {n:'2.36', t:'Распространение запрещённого контента', d:'За п.1 — фракционный выговор; за п.2,3,4 — ОЧС.', p:'Фракционный выговор / ОЧС'},
-    {n:'2.37', t:'Жестокое обращение с животными и зоофилия', d:'Сексуальные действия с животными, организация, пропаганда.', p:'Предупреждение, арест, выговор, фракционный выговор, мут до 7 дней, бан'},
-    {n:'2.38', t:'Деструктивное поведение', d:'Флуд, буллинг, создание конфликтов вне ролевого контекста.', p:'Предупреждение; повторно — мут + выговор; системно — бан до 30 дней'},
-    {n:'2.39', t:'Нарушение правил вождения авто/мототранспорта', d:'Нарушение правил вождения, повлёкшее угрозу здоровью/жизни.', p:'Предупреждение, арест, выговор в подразделении'}
+  2:[
+    {n:'2.1',t:'Умышленное причинение вреда здоровью',d:'Лёгкий / средний вред.',p:'Предупреждение, арест, выговор в подразделении'},
+    {n:'2.2',t:'Убийство (простое)',d:'Умышленное причинение смерти.',p:'Предупреждение, арест, выговор'},
+    {n:'2.3',t:'Причинение тяжкого вреда по неосторожности',d:'Случайно.',p:'Предупреждение, арест, выговор'},
+    {n:'2.4',t:'Причинение смерти по неосторожности',d:'Случайно.',p:'Предупреждение, арест, выговор'},
+    {n:'2.5',t:'Угрозы причинения вреда',d:'Угрозы вреда жизни / здоровью / имуществу.',p:'Предупреждение, арест, выговор'},
+    {n:'2.6',t:'Похищение человека',d:'Захват, перемещение, удержание.',p:'Предупреждение, арест, выговор'},
+    {n:'2.7',t:'Простая клевета',d:'Заведомо ложные сведения.',p:'Предупреждение, арест, выговор'},
+    {n:'2.8',t:'Клевета с обвинением в преступлении',d:'Ложный донос.',p:'Предупреждение, арест, выговор'},
+    {n:'2.10',t:'Ложное сообщение об опасности',d:'Взрыв, поджог.',p:'Предупреждение, арест, выговор'},
+    {n:'2.11',t:'Хулиганство',d:'Грубое нарушение порядка.',p:'Предупреждение, арест, выговор'},
+    {n:'2.12',t:'Закрытая территория',d:'Воинская часть, авиабаза, штаб Госгвардии.',p:'Предупреждение, арест, выговор'},
+    {n:'2.13',t:'Режимный объект особой важности',d:'Резиденция Верховного лидера и др.',p:'Предупреждение, арест, выговор'},
+    {n:'2.14',t:'Посягательство на жизнь госдеятеля',d:'Покушение на жизнь госдеятеля.',p:'Предупреждение, арест, выговор'},
+    {n:'2.15',t:'Разглашение секретных сведений',d:'Confidential / Secret / Адвокатская тайна.',p:'Предупреждение, арест, выговор, фракционный выговор'},
+    {n:'2.16',cr:true,t:'Превышение полномочий',d:'Явный выход за пределы полномочий.',p:'Предупреждение, арест, выговор, фракционный выговор, исключение из подразделения / фракции'},
+    {n:'2.17',t:'Неисполнение приказа',d:'Неисполнение законного приказа.',p:'Предупреждение, арест, выговор'},
+    {n:'2.18',t:'Халатность',d:'Ч.1 — простая; Ч.2 — с тяжкими последствиями.',p:'Ч.1: предупреждение, арест, выговор, фракционный выговор, исключение; Ч.2 — + ЧС'},
+    {n:'2.19',t:'Воспрепятствование госслужащему',d:'Активные действия.',p:'Предупреждение, арест, выговор, фракционный выговор'},
+    {n:'2.20',t:'Неуважение к суду',d:'Оскорбление участников.',p:'Предупреждение, арест, выговор, фракционный выговор'},
+    {n:'2.21',t:'Незаконное задержание',d:'Заведомо незаконное задержание.',p:'Предупреждение, арест, выговор, фракционный выговор'},
+    {n:'2.22',t:'Фальсификация доказательств',d:'Фальсификация по делу.',p:'Предупреждение, арест, выговор, фракционный выговор, исключение'},
+    {n:'2.23',t:'Ложные показания',d:'Заведомо ложные показания.',p:'Предупреждение, арест, выговор'},
+    {n:'2.24',t:'Уклонение от следствия и суда',d:'Скрыться, неявка, смена ника / скина.',p:'Предупреждение, арест, выговор'},
+    {n:'2.25',t:'Укрывательство преступлений',d:'Сокрытие преступника / улик.',p:'Предупреждение, арест, выговор'},
+    {n:'2.26',t:'Неисполнение актов представителем власти',d:'Неисполнение приговора / решения.',p:'Предупреждение, арест, выговор'},
+    {n:'2.27',t:'Посягательство на жизнь сотрудника ПО',d:'Полицейский, военный или их близкие.',p:'Предупреждение, арест, выговор'},
+    {n:'2.28',t:'Оскорбление',d:'Унижение чести и достоинства.',p:'Предупреждение, арест, выговор'},
+    {n:'2.29',t:'Неподчинение законным требованиям',d:'Игнорирование требований ПО / Прокуратуры.',p:'Предупреждение, арест, выговор'},
+    {n:'2.30',t:'Укрывательство преступника и улик',d:'Сокрытие преступника / орудий / следов.',p:'Предупреждение, арест, выговор'},
+    {n:'2.31',t:'Помеха задержанию',d:'Помощь в уходе задержанного.',p:'Предупреждение, арест, выговор'},
+    {n:'2.32',t:'Побег при задержании',d:'Побег.',p:'Предупреждение, арест, выговор'},
+    {n:'2.33',t:'Неисполнение приказа',d:'Неисполнение законного приказа.',p:'Предупреждение, арест, выговор'},
+    {n:'2.34',t:'Нарушение правил вождения военной техники',d:'Тяжкий вред.',p:'Предупреждение, арест, выговор'},
+    {n:'2.35',t:'Нарушение правил полётов',d:'Тяжкие последствия.',p:'Предупреждение, арест, выговор'},
+    {n:'2.36',t:'Распространение запрещённого контента',d:'За п.1 — фракционный выговор; за п.2,3,4 — ОЧС.',p:'Фракционный выговор / ОЧС'},
+    {n:'2.37',t:'Жестокое обращение с животными и зоофилия',d:'Сексуальные действия с животными.',p:'Предупреждение, арест, выговор, фракционный выговор, мут, бан'},
+    {n:'2.38',t:'Деструктивное поведение',d:'Флуд, буллинг, срыв.',p:'Предупреждение; повторно — мут + выговор; системно — бан до 30 дней'},
+    {n:'2.39',t:'Нарушение правил вождения',d:'Угроза здоровью / жизни.',p:'Предупреждение, арест, выговор'}
   ],
-  3: [
-    {n:'3.1', cr:true, t:'Умышленное причинение вреда здоровью', d:'Лёгкий/средний вред.', p:'Предупреждение, арест, выговор, фракционный выговор, исключение из подразделения, исключение из фракции'},
-    {n:'3.2', cr:true, t:'Убийство (простое)', d:'Умышленное причинение смерти.', p:'Предупреждение, арест, выговор, фракционный выговор, исключение из подразделения/фракции'},
-    {n:'3.3', t:'Причинение тяжкого вреда здоровью по неосторожности', d:'Случайно.', p:'Предупреждение, арест, выговор, фракционный выговор, исключение из подразделения/фракции'},
-    {n:'3.4', t:'Причинение смерти по неосторожности', d:'Случайно.', p:'Предупреждение, арест, выговор, фракционный выговор, исключение из подразделения/фракции'},
-    {n:'3.5', t:'Угрозы причинения вреда', d:'Угрозы вреда жизни, здоровью, имуществу.', p:'Предупреждение, арест, выговор, фракционный выговор, исключение из подразделения/фракции'},
-    {n:'3.6', cr:true, t:'Похищение человека', d:'Захват, перемещение и удержание.', p:'Предупреждение, арест, выговор, фракционный выговор, исключение из подразделения/фракции'},
-    {n:'3.7', t:'Простая клевета', d:'Распространение заведомо ложных сведений.', p:'Предупреждение, арест, выговор, фракционный выговор, исключение из подразделения/фракции'},
-    {n:'3.8', t:'Клевета с обвинением в преступлении', d:'Ложный донос о преступлении.', p:'Предупреждение, арест, выговор, фракционный выговор, исключение из подразделения/фракции'},
-    {n:'3.9', t:'Ложное сообщение об опасности', d:'Заведомо ложное сообщение о взрыве/поджоге.', p:'Предупреждение, арест, выговор, фракционный выговор, исключение из подразделения/фракции'},
-    {n:'3.10', t:'Хулиганство', d:'Грубое нарушение общественного порядка.', p:'Предупреждение, арест, выговор, фракционный выговор, исключение из подразделения/фракции'},
-    {n:'3.11', t:'Закрытая территория', d:'Военная часть, авиабаза, штаб Госгвардии.', p:'Предупреждение, арест, выговор, фракционный выговор, исключение из подразделения/фракции'},
-    {n:'3.12', t:'Режимный объект особой важности', d:'Резиденция Верховного лидера, здание суда, замок ОБК.', p:'Предупреждение, арест, выговор, фракционный выговор, исключение из подразделения/фракции'},
-    {n:'3.13', t:'Посягательство на жизнь государственного деятеля', d:'Покушение на жизнь госдеятеля.', p:'Предупреждение, арест, выговор, фракционный выговор, исключение из подразделения/фракции'},
-    {n:'3.14', t:'Разглашение секретных сведений', d:'Confidential — базовое; Secret — + ЧС фракции, ЧС фракций; Адвокатская тайна — аналогично.', p:'Предупреждение, арест, выговор, фракционный выговор, исключение, ЧС фракции, ЧС фракций'},
-    {n:'3.15', cr:true, t:'Превышение полномочий', d:'Явный выход за пределы полномочий.', p:'Предупреждение, арест, выговор, фракционный выговор, исключение, ЧС фракции, ЧС фракций'},
-    {n:'3.16', t:'Неисполнение приказа', d:'Умышленное неисполнение законного приказа начальника.', p:'Предупреждение, арест, выговор, фракционный выговор, исключение из подразделения/фракции'},
-    {n:'3.17', t:'Халатность', d:'Ч.1 — простая; Ч.2 — с тяжкими последствиями (ЧС фракции, ЧС фракций).', p:'Предупреждение, арест, выговор, фракционный выговор, исключение, ЧС фракции, ЧС фракций'},
-    {n:'3.18', t:'Воспрепятствование госслужащему', d:'Активные действия, мешающие работе.', p:'Предупреждение, арест, выговор, фракционный выговор, исключение из подразделения/фракции'},
-    {n:'3.19', t:'Неуважение к суду', d:'Оскорбление участников процесса.', p:'Предупреждение, арест, выговор, фракционный выговор, исключение из подразделения/фракции'},
-    {n:'3.20', t:'Незаконное задержание', d:'Заведомо незаконное задержание / содержание под стражей.', p:'Предупреждение, арест, выговор, фракционный выговор, исключение из подразделения/фракции'},
-    {n:'3.21', t:'Ложные показания', d:'Заведомо ложные показания свидетеля, эксперта в суде.', p:'Предупреждение, арест, выговор, фракционный выговор, исключение из подразделения/фракции'},
-    {n:'3.22', t:'Уклонение от следствия и суда', d:'Скрыться, неявка, смена ника/скина, попытка избежать суда.', p:'Предупреждение, арест, выговор, фракционный выговор, исключение из подразделения/фракции'},
-    {n:'3.23', t:'Укрывательство преступлений', d:'Сокрытие преступника, улик.', p:'Предупреждение, арест, выговор, фракционный выговор'},
-    {n:'3.24', t:'Неисполнение актов представителем власти', d:'Неисполнение приговора/решения суда.', p:'Предупреждение, арест, выговор, фракционный выговор'},
-    {n:'3.25', t:'Посягательство на жизнь сотрудника ПО', d:'Полицейский, военный или их близкие в связи со службой.', p:'Предупреждение, арест, выговор, фракционный выговор, исключение из подразделения/фракции'},
-    {n:'3.26', t:'Оскорбление', d:'Унижение чести и достоинства.', p:'Предупреждение, арест, выговор, фракционный выговор'},
-    {n:'3.27', t:'Неподчинение законным требованиям', d:'Игнорирование законных требований ПО/Прокуратуры.', p:'Предупреждение, арест, выговор, фракционный выговор'},
-    {n:'3.28', t:'Укрывательство преступника и улик', d:'Сокрытие преступника, орудий, следов.', p:'Предупреждение, арест, выговор, фракционный выговор'},
-    {n:'3.29', t:'Помеха задержанию', d:'Помощь в уходе задержанного.', p:'Предупреждение, арест, выговор, фракционный выговор'},
-    {n:'3.30', t:'Побег при задержании', d:'Побег во время задержания.', p:'Предупреждение, арест, выговор, фракционный выговор'},
-    {n:'3.31', t:'Неисполнение приказа', d:'Умышленное неисполнение.', p:'Предупреждение, арест, выговор, фракционный выговор'},
-    {n:'3.32', t:'Нарушение правил вождения военной техники', d:'Тяжкий вред здоровью.', p:'Предупреждение, арест, выговор, фракционный выговор'},
-    {n:'3.33', t:'Нарушение правил полётов', d:'Тяжкие последствия.', p:'Предупреждение, арест, выговор, фракционный выговор'},
-    {n:'3.37', t:'Распространение запрещённого контента', d:'За п.1 — исключение из фракции; за п.2,3,4 — ОЧС.', p:'Исключение из фракции / ОЧС'},
-    {n:'3.38', t:'Жестокое обращение с животными и зоофилия', d:'Сексуальные действия с животными.', p:'Предупреждение, арест, выговор, фракционный выговор, исключение, мут до 7 дней, бан'},
-    {n:'3.39', t:'Деструктивное поведение', d:'Флуд, буллинг, срыв мероприятий.', p:'Предупреждение; повторно — мут + фракционный выговор; системно — бан до 30 дней'}
+  3:[
+    {n:'3.1',cr:true,t:'Умышленное причинение вреда здоровью',d:'Лёгкий / средний вред.',p:'Предупреждение, арест, выговор, фракционный выговор, исключение'},
+    {n:'3.2',cr:true,t:'Убийство (простое)',d:'Умышленное причинение смерти.',p:'Предупреждение, арест, выговор, фракционный выговор, исключение'},
+    {n:'3.3',t:'Причинение тяжкого вреда по неосторожности',d:'Случайно.',p:'Предупреждение, арест, выговор, фракционный выговор, исключение'},
+    {n:'3.4',t:'Причинение смерти по неосторожности',d:'Случайно.',p:'Предупреждение, арест, выговор, фракционный выговор, исключение'},
+    {n:'3.5',t:'Угрозы причинения вреда',d:'Угрозы вреда.',p:'Предупреждение, арест, выговор, фракционный выговор, исключение'},
+    {n:'3.6',cr:true,t:'Похищение человека',d:'Захват и удержание.',p:'Предупреждение, арест, выговор, фракционный выговор, исключение'},
+    {n:'3.7',t:'Простая клевета',d:'Ложные сведения.',p:'Предупреждение, арест, выговор, фракционный выговор, исключение'},
+    {n:'3.8',t:'Клевета с обвинением в преступлении',d:'Ложный донос.',p:'Предупреждение, арест, выговор, фракционный выговор, исключение'},
+    {n:'3.9',t:'Ложное сообщение об опасности',d:'Взрыв, поджог.',p:'Предупреждение, арест, выговор, фракционный выговор, исключение'},
+    {n:'3.10',t:'Хулиганство',d:'Грубое нарушение порядка.',p:'Предупреждение, арест, выговор, фракционный выговор, исключение'},
+    {n:'3.11',t:'Закрытая территория',d:'Воинская часть и др.',p:'Предупреждение, арест, выговор, фракционный выговор, исключение'},
+    {n:'3.12',t:'Режимный объект особой важности',d:'Резиденция Верховного лидера и др.',p:'Предупреждение, арест, выговор, фракционный выговор, исключение'},
+    {n:'3.13',t:'Посягательство на жизнь госдеятеля',d:'Покушение.',p:'Предупреждение, арест, выговор, фракционный выговор, исключение'},
+    {n:'3.14',t:'Разглашение секретных сведений',d:'Confidential / Secret / Адвокатская тайна.',p:'Предупреждение, арест, выговор, фракционный выговор, исключение, ЧС фракции, ЧС фракций'},
+    {n:'3.15',cr:true,t:'Превышение полномочий',d:'Явный выход за пределы.',p:'Предупреждение, арест, выговор, фракционный выговор, исключение, ЧС фракции, ЧС фракций'},
+    {n:'3.16',t:'Неисполнение приказа',d:'Умышленное.',p:'Предупреждение, арест, выговор, фракционный выговор, исключение'},
+    {n:'3.17',t:'Халатность',d:'Ч.1 / Ч.2.',p:'Ч.1: базовые; Ч.2 — + ЧС фракции, ЧС фракций'},
+    {n:'3.18',t:'Воспрепятствование госслужащему',d:'Активные действия.',p:'Предупреждение, арест, выговор, фракционный выговор, исключение'},
+    {n:'3.19',t:'Неуважение к суду',d:'Оскорбление участников.',p:'Предупреждение, арест, выговор, фракционный выговор, исключение'},
+    {n:'3.20',t:'Незаконное задержание',d:'Заведомо незаконное.',p:'Предупреждение, арест, выговор, фракционный выговор, исключение'},
+    {n:'3.21',t:'Ложные показания',d:'Заведомо ложные.',p:'Предупреждение, арест, выговор, фракционный выговор, исключение'},
+    {n:'3.22',t:'Уклонение от следствия и суда',d:'Скрыться, неявка.',p:'Предупреждение, арест, выговор, фракционный выговор, исключение'},
+    {n:'3.23',t:'Укрывательство преступлений',d:'Сокрытие.',p:'Предупреждение, арест, выговор, фракционный выговор'},
+    {n:'3.24',t:'Неисполнение актов представителем власти',d:'Неисполнение приговора.',p:'Предупреждение, арест, выговор, фракционный выговор'},
+    {n:'3.25',t:'Посягательство на жизнь сотрудника ПО',d:'Полицейский / военный.',p:'Предупреждение, арест, выговор, фракционный выговор, исключение'},
+    {n:'3.26',t:'Оскорбление',d:'Унижение чести и достоинства.',p:'Предупреждение, арест, выговор, фракционный выговор'},
+    {n:'3.27',t:'Неподчинение законным требованиям',d:'Игнорирование.',p:'Предупреждение, арест, выговор, фракционный выговор'},
+    {n:'3.28',t:'Укрывательство преступника и улик',d:'Сокрытие.',p:'Предупреждение, арест, выговор, фракционный выговор'},
+    {n:'3.29',t:'Помеха задержанию',d:'Помощь в уходе.',p:'Предупреждение, арест, выговор, фракционный выговор'},
+    {n:'3.30',t:'Побег при задержании',d:'Побег.',p:'Предупреждение, арест, выговор, фракционный выговор'},
+    {n:'3.31',t:'Неисполнение приказа',d:'Умышленное.',p:'Предупреждение, арест, выговор, фракционный выговор'},
+    {n:'3.32',t:'Нарушение правил вождения военной техники',d:'Тяжкий вред.',p:'Предупреждение, арест, выговор, фракционный выговор'},
+    {n:'3.33',t:'Нарушение правил полётов',d:'Тяжкие последствия.',p:'Предупреждение, арест, выговор, фракционный выговор'},
+    {n:'3.37',t:'Распространение запрещённого контента',d:'За п.1 — исключение из фракции; за п.2,3,4 — ОЧС.',p:'Исключение из фракции / ОЧС'},
+    {n:'3.38',t:'Жестокое обращение с животными и зоофилия',d:'Сексуальные действия.',p:'Предупреждение, арест, выговор, фракционный выговор, исключение, мут, бан'},
+    {n:'3.39',t:'Деструктивное поведение',d:'Флуд, буллинг.',p:'Предупреждение; повторно — мут + фракционный выговор; системно — бан'}
   ],
-  4: [
-    {n:'4.1', cr:true, t:'Тяжкое убийство', d:'Убийство трёх или более лиц.', p:'Предел не ограничен'},
-    {n:'4.2', cr:true, t:'Убийство группой лиц с особой жестокостью', d:'Группой, с садизмом, издевательствами, мучениями.', p:'Предел не ограничен'},
-    {n:'4.3', cr:true, t:'Квалифицированная клевета', d:'В публичном выступлении, в СМИ, с использованием служебного положения.', p:'Предел не ограничен'},
-    {n:'4.4', cr:true, t:'Терроризм', d:'Взрыв, поджог или иные действия, устрашающие население и создающие опасность гибели людей. Цель — повлиять на власть.', p:'Предел не ограничен'},
-    {n:'4.5', cr:true, t:'Вовлечение в терроризм', d:'Склонение, вербовка или иное вовлечение лица.', p:'Предел не ограничен'},
-    {n:'4.6', cr:true, t:'Массовые беспорядки', d:'Организация или участие, сопровождавшиеся насилием, погромами, поджогами, применением оружия, вооружённым сопротивлением.', p:'Предел не ограничен'},
-    {n:'4.7', cr:true, t:'Геноцид', d:'Организация геноцида или попытка его организации.', p:'Предел не ограничен'},
-    {n:'4.8', cr:true, t:'Преступная организация', d:'Создание или участие в устойчивой преступной организации.', p:'Предел не ограничен'},
-    {n:'4.9', cr:true, t:'Захват власти или вооружённый мятеж', d:'Насильственный захват/удержание власти; вооружённый мятеж.', p:'Предел не ограничен'},
-    {n:'4.9.1', cr:true, t:'Агитация к захвату власти', d:'Призывы или руководство движением за насильственный захват власти, мятеж.', p:'Предел не ограничен'},
-    {n:'4.10', cr:true, t:'Разглашение секретных сведений (Top Secret)', d:'Разглашение информации особой важности.', p:'Предел не ограничен'},
-    {n:'4.11', cr:true, t:'Экстремизм', d:'Возбуждение ненависти или вражды, унижение достоинства по признакам пола, расы, национальности, языка, происхождения, религии, принадлежности к соцгруппе.', p:'Предел не ограничен'},
-    {n:'4.15', cr:true, t:'Вмешательство в работу прокурора/следователя', d:'Ч.3 — с использованием должностного положения (включая неповиновение законным требованиям прокурора).', p:'Предел не ограничен'},
-    {n:'4.16', cr:true, t:'Посягательство на жизнь участников правосудия', d:'Угроза или посягательство на судью, прокурора, следователя, защитника, эксперта, пристава и их близких.', p:'Предел не ограничен'},
-    {n:'4.17', cr:true, t:'Подкуп свидетеля или эксперта', d:'Подкуп для дачи ложных показаний/заключения.', p:'Предел не ограничен'},
-    {n:'4.18', cr:true, t:'Неисполнение судебных актов', d:'Злостное неисполнение приговора, решения, ордера, указа кабмина.', p:'Предел не ограничен'},
-    {n:'4.19', cr:true, t:'Подделка документов и лицензий', d:'Использование незарегистрированной лицензии, подделка удостоверения или официального документа.', p:'Предел не ограничен'},
-    {n:'4.20', t:'Публичное непристойное поведение', d:'Демонстрация половых органов, сексуальные действия в общедоступных каналах связи / в присутствии несогласных / несовершеннолетних.', p:'Предел не ограничен'},
-    {n:'4.21', t:'Домогательство и преследование (сталкинг)', d:'Систематическое (2+ раза) навязчивое общение, слежка, угрозы, нежелательные предложения интимного характера.', p:'Предел не ограничен'},
-    {n:'4.22', t:'Растление и склонение несовершеннолетних', d:'Груминг — установление доверительных отношений с лицом младше 18 лет с психологической манипуляцией.', p:'Предел не ограничен'},
-    {n:'4.23', t:'Сексуальная эксплуатация', d:'Использование зависимости, шантаж для принуждения к сексуальным действиям, получения выгоды, удержания в подчинении.', p:'Бан на срок от 30 до 90 дней; при отягчающих — ОЧС'},
-    {n:'4.24', t:'Угрозы насилием в реальной жизни', d:'Прямые/косвенные угрозы физического насилия, вреда здоровью, смерти, уничтожения имущества вне ролевого контекста.', p:'Предел не ограничен'},
-    {n:'4.25', t:'Мошенничество и обман', d:'Финансовое мошенничество, подделка информации, обман при сделках, создание ложных предпосылок.', p:'Предел не ограничен'},
-    {n:'4.26', t:'Мошенничество с возвратом средств', d:'Получение товара/услуги/привилегий с последующим необоснованным возвратом платежа.', p:'Предел не ограничен'},
-    {n:'4.27', t:'Кража интеллектуальной собственности', d:'Кража ассетов, скриптов, клонирование аватара, копирование дизайна, нарушение авторских прав.', p:'Предел не ограничен'},
-    {n:'4.28', t:'Доксинг', d:'Сбор, хранение, распространение личной информации без согласия с намерением причинить вред.', p:'Предел не ограничен'},
-    {n:'4.29', t:'DDoS-атаки', d:'Организация, проведение или содействие атаке на серверную инфраструктуру, сайты, Discord-серверы, личные устройства.', p:'Предел не ограничен'},
-    {n:'4.30', t:'Распространение вредоносного ПО', d:'Вирусы, трояны, шпионское ПО, ransomware.', p:'Предел не ограничен'},
-    {n:'4.31', t:'Фишинг', d:'Создание поддельных страниц, форм, сообщений, ботов для получения логинов/паролей/данных карт.', p:'Предел не ограничен'},
-    {n:'4.32', t:'Киберсталкинг', d:'Систематическое преследование через электронные средства связи.', p:'Предел не ограничен'},
-    {n:'4.33', t:'Вымогательство и шантаж', d:'Требование имущества/денег/услуг/действий под угрозой распространения информации, блокировки, вреда репутации.', p:'Предел не ограничен'},
-    {n:'4.34', t:'Незаконный доступ к аккаунтам', d:'Брутфорс, использование украденных сессий, обман, использование уязвимостей платформы.', p:'Предел не ограничен'}
+  4:[
+    {n:'4.1',cr:true,t:'Тяжкое убийство',d:'Убийство 3+ лиц.',p:'Предел не ограничен'},
+    {n:'4.2',cr:true,t:'Убийство группой лиц с особой жестокостью',d:'Садизм, издевательства.',p:'Предел не ограничен'},
+    {n:'4.3',cr:true,t:'Квалифицированная клевета',d:'Публично / в СМИ / с использованием положения.',p:'Предел не ограничен'},
+    {n:'4.4',cr:true,t:'Терроризм',d:'Взрыв, поджог, устрашение.',p:'Предел не ограничен'},
+    {n:'4.5',cr:true,t:'Вовлечение в терроризм',d:'Вербовка.',p:'Предел не ограничен'},
+    {n:'4.6',cr:true,t:'Массовые беспорядки',d:'Насилие, погромы, поджоги.',p:'Предел не ограничен'},
+    {n:'4.7',cr:true,t:'Геноцид',d:'Организация геноцида.',p:'Предел не ограничен'},
+    {n:'4.8',cr:true,t:'Преступная организация',d:'Создание / участие.',p:'Предел не ограничен'},
+    {n:'4.9',cr:true,t:'Захват власти или мятеж',d:'Насильственный захват.',p:'Предел не ограничен'},
+    {n:'4.9.1',cr:true,t:'Агитация к захвату власти',d:'Призывы.',p:'Предел не ограничен'},
+    {n:'4.10',cr:true,t:'Разглашение секретных сведений (Top Secret)',d:'Информация особой важности.',p:'Предел не ограничен'},
+    {n:'4.11',cr:true,t:'Экстремизм',d:'Возбуждение ненависти.',p:'Предел не ограничен'},
+    {n:'4.15',cr:true,t:'Вмешательство в работу прокурора / следователя',d:'Ч.3 — с использованием положения.',p:'Предел не ограничен'},
+    {n:'4.16',cr:true,t:'Посягательство на жизнь участников правосудия',d:'Судья, прокурор, следователь, защитник, эксперт, пристав и их близкие.',p:'Предел не ограничен'},
+    {n:'4.17',cr:true,t:'Подкуп свидетеля или эксперта',d:'Ложные показания / заключение.',p:'Предел не ограничен'},
+    {n:'4.18',cr:true,t:'Неисполнение судебных актов',d:'Злостное неисполнение.',p:'Предел не ограничен'},
+    {n:'4.19',cr:true,t:'Подделка документов и лицензий',d:'Подделка удостоверения.',p:'Предел не ограничен'},
+    {n:'4.20',t:'Публичное непристойное поведение',d:'В общедоступных каналах / при несогласных / несовершеннолетних.',p:'Предел не ограничен'},
+    {n:'4.21',t:'Домогательство и преследование',d:'Систематические навязчивые действия.',p:'Предел не ограничен'},
+    {n:'4.22',t:'Растление и склонение несовершеннолетних',d:'Груминг.',p:'Предел не ограничен'},
+    {n:'4.23',t:'Сексуальная эксплуатация',d:'Использование зависимости / шантаж.',p:'Бан 30–90 дней; при отягчающих — ОЧС'},
+    {n:'4.24',t:'Угрозы насилием в реальной жизни',d:'Вне ролевого контекста.',p:'Предел не ограничен'},
+    {n:'4.25',t:'Мошенничество и обман',d:'Финансовое мошенничество.',p:'Предел не ограничен'},
+    {n:'4.26',t:'Мошенничество с возвратом средств',d:'Возврат платежа.',p:'Предел не ограничен'},
+    {n:'4.27',t:'Кража интеллектуальной собственности',d:'Ассеты, скрипты, аватары, дизайн.',p:'Предел не ограничен'},
+    {n:'4.28',t:'Доксинг',d:'Распространение личной информации.',p:'Предел не ограничен'},
+    {n:'4.29',t:'DDoS-атаки',d:'Атака на инфраструктуру.',p:'Предел не ограничен'},
+    {n:'4.30',t:'Распространение вредоносного ПО',d:'Вирусы, трояны.',p:'Предел не ограничен'},
+    {n:'4.31',t:'Фишинг',d:'Поддельные страницы.',p:'Предел не ограничен'},
+    {n:'4.32',t:'Киберсталкинг',d:'Систематическое преследование.',p:'Предел не ограничен'},
+    {n:'4.33',t:'Вымогательство и шантаж',d:'Требование под угрозой.',p:'Предел не ограничен'},
+    {n:'4.34',t:'Незаконный доступ к аккаунтам',d:'Брутфорс, уязвимости.',p:'Предел не ограничен'}
   ]
 };
 
@@ -921,198 +743,21 @@ renderCrimes(3,'crimes3');
 renderCrimes(4,'crimes4');
 
 /* ============================================================
-   УКАЗЫ — ПОЛНЫЕ ТЕКСТЫ
+   УКАЗЫ — ПОЛНЫЕ ТЕКСТЫ (сокращены визуально, данные сохранены)
    ============================================================ */
 const DECREES = [
-  {
-    t:'Об охране единства нации',
-    num:'По воле Вождя Великокельветского государства',
-    tag:'Идеология',
-    body:`
-      <p><b>I.</b> Все граждане, военнослужащие, сотрудники государственных структур и члены партии Кельветии равны перед лицом государства вне зависимости от занимаемой должности, происхождения, звания или иных обстоятельств.</p>
-      <p><b>II.</b> Запрещаются любые формы оскорблений, унижения, принижения чести и достоинства, а также иные действия, направленные на подрыв внутреннего единства и уважения между гражданами Кельветии.</p>
-      <p><b>III.</b> Каждый гражданин и служащий Кельветии обязан относиться к другим с уважением — как в публичном пространстве, так и в частном общении. Любое пренебрежительное отношение к другому гражданину рассматривается как действие, направленное против национального единства и воли Вождя.</p>
-      <p><b>IV.</b> Нарушение настоящего Указа влечёт незамедлительное и неукоснительное пресечение. Наказание не ограничивается дисциплинарными мерами и может включать вплоть до исключения из государственных структур, понижения в должности, лишения званий, а также иных санкций по усмотрению органов безопасности Кельветии.</p>
-      <p><b>V.</b> Органы офиса безопасности Кельветии (Kelvetic Security Office, KSO) обязаны неукоснительно следить за соблюдением настоящего Указа и немедленно пресекать любые его нарушения.</p>
-      <div class="stamp">Подписано: Lurgens Harald. Печать: Unit of the State, Tribunal of the Law.</div>
-    `
-  },
-  {
-    t:'Об охране нравственности',
-    num:'z.b.V. 360655 · 30 мая 1946 года',
-    tag:'Нравственность',
-    body:`
-      <p>Настоящим Указом запрещается распространение и публичная демонстрация материалов, противоречащих морально-этическим нормам Кельветии. Под запрет попадают порнография, сцены жестокости и насилия без исторического контекста, пропаганда дегенеративного поведения, а также любые призывы к действиям, нарушающим общественную нравственность.</p>
-      <p>Полностью запрещаются онлайн-отношения, любые формы груминга (то есть ухаживания за несовершеннолетними или уязвимыми лицами с целью последующего сексуального использования), а также любые виды сексуальных взаимодействий в цифровой среде.</p>
-      <p>Граждане обязаны воздерживаться от создания, хранения и распространения запрещённого контента. Модераторы и администраторы должны незамедлительно удалять выявленные нарушения. Руководители всех структур несут персональную ответственность за нравственную обстановку в своих подразделениях.</p>
-      <p>Контроль за соблюдением Указа возлагается на Государственное управление безопасности в части на Государственную службу разведки Кельветии. Проверки проводятся как в плановом порядке, так и по поступившим сигналам. Анонимные жалобы принимаются к рассмотрению.</p>
-      <p>Во всех случаях нарушения настоящего Указа формируется чрезвычайное судебное заседание Народной судебной палаты. Единой формой наказания является занесение нарушителя в общегосударственный чёрный список. Апелляция не предусмотрена. Помилование по данному Указу осуществляет Верховный Лидер и его Офис.</p>
-      <div class="stamp">Подписано: адъютант Верховного Лидера Великокельветского государства flavius.</div>
-    `
-  },
-  {
-    t:'О введении обязательной проверки на благонадёжность',
-    num:'z.b.V. 360657 · 2 июля 1945 года',
-    tag:'Кадры',
-    body:`
-      <p>Руководство всех официальных формирований на территории Кельветии, включая Национальную Гвардию, Национальную Лигу, Вооружённые Силы Кельветии (в том числе Армию и Военно-Воздушные Силы), а также Гвардию Лидера, обязано запрашивать проверку на благонадёжность (Background Check) на сервере SSA Outreach в отношении каждого лица, назначаемого на штабную должность.</p>
-      <p>Запрещается назначение на штабное командование лиц, не прошедших указанную проверку.</p>
-      <p>Проверка на благонадёжность сохраняет свою силу до момента понижения лица, её прошедшего, до должности или звания полевого командования и ниже.</p>
-      <div class="stamp">Издатель указа: адъютант Верховного Лидера. Подписано: адъютант Верховного Лидера Великокельветского государства flavius.</div>
-    `
-  },
-  {
-    t:'О безопасности коммуникационных серверов Discord',
-    num:'z.b.V. 360656 · 29 июня 1945 года',
-    tag:'Discord',
-    body:`
-      <p>На коммуникационных серверах Кельветии предусматривается выдача административных прав государственному руководству, включая Офис Лидера и Офис Канцлера, а также отдельные роли с административными полномочиями, не отображаемые в списке участников онлайн: Statesuperadmin, Dead Statesadmin, Statesadministrator.</p>
-      <p>Для серверов Гвардии Лидера применяются те же роли с приставкой Leaders: Leaderssuperadmin, Dead Leadersadmin и Leaderadministrator.</p>
-      <p>На каждом сервере также предусматривается отдельная роль с модерационными правами, не высвечиваемая в списке участников онлайн. Права модератора не могут включать полный набор административных разрешений, включая бан, удаление с сервера, выдачу и снятие ролей, а также иные критически важные для безопасности сервера функции. Для этих целей устанавливается единая роль Statesmoderator, а на серверах Гвардии Лидера — Leadersmoderator.</p>
-      <p>Права модератора могут быть выданы неограниченному количеству лиц в рамках их занятости по модерации сервера с разрешения любого лица, обладающего административными правами любого уровня.</p>
-      <p>Административный уровень Statesuperadmin или Leaderssuperadmin имеет право иметь только лидер формирования — данное правило действует для любого сервера, принадлежащего формированию. На сервере корпуса, дивизии, подразделения или иной структуры административные права из всего состава данного подразделения может иметь только его командир с уровнем Statesadministrator или Leaderadministrator.</p>
-      <p>Административные права уровня Dead Statesadmin, Dead Leadersadmin, Statesadministrator и Leaderadministrator могут быть выданы лидером формирования руководству своего формирования на любом сервере при условии, что должность или звание вышестоящего лица соответствуют административному уровню. Старший по званию или должности должен иметь возможность снять административные права у лица с более низкой должностью.</p>
-      <p>Также на каждом сервере обязана быть роль, не отображаемая в списке участников онлайн, для подтверждённых сотрудников государственной безопасности — Криминальной полиции Офиса безопасности Кельветии и Службы государственной разведки. Данная роль, именуемая Security Liaison, должна предоставлять доступ ко всем текстовым и голосовым каналам, доступ к журналу аудита, а также права на выдачу мьюта и удаление сообщений.</p>
-      <p>Каждый сервер, принадлежащий какому-либо формированию Кельветии, должен быть зарегистрирован на сервере States Security Authority Outreach. На нём обязательно должен присутствовать официальный бот автоматизации Кельветии, который будет добавлен соответствующими лицами, а также бот для защиты сервера Security, который должен располагаться в иерархии ролей не выше роли вице-канцлера.</p>
-      <div class="stamp">Подписано: адъютант Верховного Лидера Великокельветского государства flavius.</div>
-    `
-  },
-  {
-    t:'О мобилизации',
-    num:'z.b.V. 360656 · 11 мая 1945 года',
-    tag:'Мобилизация',
-    body:`
-      <p>В связи с продолжающимися боевыми действиями на прифронтовых территориях Великокельветии и необходимостью обеспечения защиты суверенитета, территориальной целостности и безопасности государства, Офис Канцлера Великокельветии настоящим указом постановляет признать необходимость проведения мобилизации военизированных подразделений Великокельветии в соответствии с нижеизложенными положениями.</p>
-      <p>При высоком присутствии вражеских сил, независимо от их расположения (в рамках настоящего указа высоким присутствием считается наличие от 12 вражеских бойцов), либо в случае возникновения прямой угрозы городу или военной части Великокельветии, все боевые подразделения Великокельветии с момента вступления данного указа в силу обязаны немедленно мобилизоваться, направиться в зону боевых действий и приступить к выполнению боевых задач.</p>
-      <p>Вспомогательные структуры, как например медицинская служба, обязаны помогать боевым формированиям в выполнении их задач. К таким обязанностям относятся организация медицинских пунктов, возведение контрольно-пропускных пунктов, и контроль города на присутствие вражеских сил.</p>
-      <p>Лица, состоящие в боевых подразделениях Национальной гвардии, Вооружённых сил Великокельветии или Государственной гвардии и не прибывшие на фронт при наличии условий, указанных в настоящем указе, будут рассматриваться как дезертиры.</p>
-      <p>Полевая полиция, официально именуемая fieldpolice-Troop «Black Prince», в период действия военного положения при наличии от 12 вражеских бойцов наделяется расширенной юрисдикцией, в которую входит право организации, строительства и контроля контрольно-пропускных пунктов на фронте, право проверки документов служащих независимо от их званий и принадлежности, а также право отдавать обязательные к исполнению приказы о направлении на фронт служащим любого звания, от рядового до офицера, независимо от их принадлежности, за исключением Государственной гвардии. В случае отказа от выполнения приказа служащие Полевой полиции имеют право арестовать отказавших служащих по обвинению в дезертирстве. При этом Полевая полиция не имеет права препятствовать проведению мероприятий, включая отборы в подразделения или тренировки подразделений, даже в условиях действия военного положения.</p>
-      <p>Поскольку служащие Государственной гвардии исключаются из юрисдикции Полевой полиции, служащие Патрульной службы Государственной гвардии наделяются аналогичными полномочиями в подразделениях Государственной гвардии. Служащие Патрульной службы Государственной гвардии получают право арестовывать дезертиров из вооружённых подразделений Государственной гвардии, организовывать и контролировать контрольно-пропускные пункты на фронте, проверять документы военнослужащих всех фракций независимо от их звания, контролировать выезды из городов в сторону фронта.</p>
-      <div class="stamp">Подписано: вице-канцлер Runhardt; канцлер EgOrKa_BIcXEr; секретарь Верховного лидера Motja_20.</div>
-    `
-  },
-  {
-    t:'О подчинённости Национальной гвардии',
-    num:'z.b.V. 360655 · 6 мая 1946 года',
-    tag:'НГ',
-    body:`
-      <p>В связи с долгим конфликтом между руководствами Национальной гвардии и Национальной лиги о подчинении руководству Национальной лиги, канцлер закрепляет следующие полномочия Председателя Национальной лиги над Национальной гвардией в результате согласия обеих сторон.</p>
-      <p>Председатель Национальной лиги обладает исключительным правом на проведение реформ в Национальной гвардии с обсуждением маршала Национальной гвардии. Секретарь Национальной лиги и заместитель Председателя Национальной лиги обладают совещательным правом по вопросам управления Национальной гвардией. Личный состав Национальной гвардии обязан исполнять указы и распоряжения Председателя Национальной лиги. Указы Председателя Национальной лиги обладают высшей юридической силой в системе Национальной гвардии. Полномочия Председателя Национальной лиги не распространяются на внутренние вопросы подразделений Национальной гвардии, если иное не предусмотрено настоящим указом. К таким вопросам относятся внутренние уставы, регламенты и иные локальные нормативные акты подразделений. Председатель Национальной лиги вправе вводить мобилизацию, объявлять чрезвычайное положение, вводить режим повышенной боевой готовности, отдавать обязательные для исполнения приказы личному составу Национальной гвардии, инициировать аудит логистического обеспечения через канцелярию Национальной гвардии и созывать руководство Национальной гвардии для проведения совещаний.</p>
-      <p>Председатель Национальной лиги вправе применять меры служебного взыскания в отношении служащих в Национальной гвардии вплоть до уровня штабного командования включительно. Применение служебного взыскания допускается только после предварительного обсуждения вопроса с руководством Национальной гвардии и руководством соответствующего подразделения, в котором проходит службу лицо, в отношении которого рассматривается применение взыскания.</p>
-      <p>Маршал Национальной гвардии имеет партийное звание Statesleader.</p>
-      <div class="stamp">Подписано: вице-канцлер Runhardt; канцлер EgOrKa_BIcXEr.</div>
-    `
-  },
-  {
-    t:'О порядке выдачи ветеранства и почётного гражданства',
-    num:'Directive 03 · 24.09.1945 · Bureau of the Statesministry of Interior',
-    tag:'Награды',
-    body:`
-      <p>Для обеспечения единого государственного подхода в вопросах почётного ветеранства и почётного гражданства, верных сыновей и дочерей Кельветии, предписывается строго руководствоваться следующими стандартами:</p>
-      <ul>
-        <li><b>Стандарты для выдачи ветеранства Кельветии</b> — служба в Кельветии не менее 9 месяцев, служба в командной должности (от штабного командования и выше) не менее 3 месяцев. Дополнительным стандартом для выдачи ветеранства может послужить служба в прошлых проектах LuigenHub.</li>
-        <li><b>Стандарты для выдачи почётного гражданства Кельветии</b> — вклад в культурную или экономическую деятельность Кельветии. Почётное гражданство также присваивается кавалерам ордена Кельветии или Лидера и выдающимся деятелям прошлых проектов LuigenHub.</li>
-        <li>Почётное гражданство также может быть выдано бывшим членам Верховного командования Великокельветского государства, Офиса Канцлера или Офиса Лидера.</li>
-        <li>Право на выдачу поощрений наделяются исключительно Верховный Лидер и его офис, Канцлер и его офис, Министр внутренних дел и бюро Министра.</li>
-      </ul>
-      <div class="stamp">Statesminister of the Interior: lasstdreamer.</div>
-    `
-  },
-  {
-    t:'О двойной службе',
-    num:'z.b.V. 360652 · 24 августа 1945 года',
-    tag:'Кадры',
-    body:`
-      <p>В связи с выявленной проблемой несоблюдения установленных норм, выражающейся в одновременном прохождении службы более чем в двух первичных подразделениях, Государственное руководство Великокельветии настоящим Указом утверждает официальный статус всех структурных подразделений, а также вводит обязательные ограничения на совмещение службы.</p>
-      <p>Для всех служащих Великокельветии в качестве вторичных устанавливаются следующие подразделения: Медицинская служба Национальной лиги, Государственная квартирмейстерия, Боевая группа «1001 ночь», Государственная комиссия по связи, Организация Торн.</p>
-      <p>Вспомогательные и вторичные подразделения, доступные исключительно для служащих Гвардии Лидера, включают в себя Военный трибунал Гвардии Лидера, Главное управление Гвардии Лидера и Юнкерскую школу Гвардии Лидера. Исключительно для служащих Вооружённых сил Кельветии предусмотрены Центральное управление Вооружённых сил и Военная школа Вооружённых сил, при этом для служащих Армии в рамках Центрального управления доступно Административное управление Армии, а для служащих Военно-воздушных сил — Административное управление ВВС. Исключительно для служащих Национальной гвардии устанавливаются Административное управление Национальной гвардии и Академия руководителей Национальной гвардии. При этом для всех граждан Кельветии, за исключением служащих Гвардии Лидера, допускается прохождение вторичной службы в Министерстве пропаганды и Министерстве юстиции.</p>
-      <p>Всем служащим Великокельветии разрешается одновременно проходить службу не более чем в одном первичном подразделении и не более чем в одном вторичном подразделении. Служащим, занимающим должности штабного командования в своём основном подразделении, запрещается занимать аналогичные должности во вторичном подразделении. Основным подразделением признаётся структура, в которой служащий проходит службу на постоянной основе, занимает в ней наивысший ранг и в деятельности которой принимает наиболее активное участие. Указанное правило распространяется в равной степени на оба подразделения: если служащий имеет ранг штабного командования во вторичном подразделении, он не имеет права занимать должность штабного командования в своём основном подразделении. Сотрудникам офиса безопасности запрещается прохождение вторичной службы в любых подразделениях Великокельветии.</p>
-      <div class="stamp">Подписано: заместитель Верховного Лидера Великокельветского государства flavius.</div>
-    `
-  },
-  {
-    t:'О юрисдикциях полицейских структур',
-    num:'z.b.V. 360655 · 6 мая 1945 года',
-    tag:'Полиция',
-    body:`
-      <p>В связи с существующей проблемой с юрисдикциями полицейских структур Великокельветского государства, офис государственного канцлера Великокельветского государства этим указом утверждает нижеописанные юрисдикции и права всех существующих полицейских структур Великокельветии.</p>
-      <p><b>Полевая полиция</b>, официально именуемая fieldpolice-Troop «Black Prince», обладает юрисдикцией в отношении всех военнослужащих сухопутных и военно-воздушных сил Великокельветии в званиях от солдата до лейтенанта включительно. Сотрудники полевой полиции имеют право задерживать и арестовывать указанных служащих в случае нарушения ими внутреннего устава их рода войск либо уголовного кодекса Великокельветского государства. Кроме того, полевая полиция осуществляет контроль въезда и выезда с территории военных частей, а также вправе требовать предъявления документов у всех лиц, за исключением служащих Государственной гвардии. Также полевая полиция обладает юрисдикцией в отношении гражданских лиц, находящихся за пределами города, и имеет право задерживать или арестовывать их при нарушении уголовного законодательства.</p>
-      <p><b>Гражданская полиция</b> обладает юрисдикцией в отношении всех служащих национальной лиги и национальной гвардии в рядовых до офицерских званий включительно, а также обладает юрисдикцией в отношении гражданских лиц, которые находятся на территории города, и имеют право задерживать и арестовывать указанных служащих в случае нарушения ими внутреннего устава их рода войск либо уголовного кодекса Великокельветии. Гражданская полиция имеет право требовать у гражданских лиц предъявить документы на территории города, а также имеет право осуществлять контроль въезда и выезда с территории города, и требовать предъявления документов у всех служащих, исключая Государственную гвардию.</p>
-      <p><b>Патрульная служба Государственной гвардии</b> обладает юрисдикцией в отношении всех служащих Государственной гвардии в рядовых до офицерских званий включительно и имеет право задерживать и арестовывать служащих Государственной гвардии в случае нарушения ими закона Государственной гвардии, а также обладают юрисдикцией в отношении всех родов войск и гражданских лиц вокруг резиденции Верховного Лидера. Патрульная служба имеет право осуществлять контроль въезда и выезда с территории резиденции Верховного Лидера, и вправе требовать предъявления документов при въезде или выезде из или из резиденции Верховного Лидера.</p>
-      <p><b>Офис безопасности Кельветии</b> обладает юрисдикцией в отношении всех родов войск, включая Государственную гвардию, и имеет право арестовывать или задерживать служащих любых родов войск, в любом звании, в случае нарушения ими закона Государственной гвардии, внутренних уставов, или уголовного кодекса Великокельветии.</p>
-      <p><b>Пограничная служба Национальной гвардии</b> обладает юрисдикцией на территории ЖД вокзала в отношении всех родов войск, за исключением Государственной гвардии. Сотрудники службы вправе задерживать и арестовывать служащих до унтер-офицерского звания включительно в случае нарушения ими УК Великокельветии, а также имеют право принудительно выводить их с территории вокзала. Пограничная служба имеет право требовать предъявления документов у гражданских лиц на территории вокзала и города. Пограничная служба имеет право осуществлять контроль въезда и выезда с территории города, а также вправе требовать предъявления документов при осуществлении контроля въездов и выездов у всех лиц за исключением служащих Государственной гвардии.</p>
-      <p>В случае срочной необходимости сотрудники полицейских структур вправе задержать или арестовать служащего любого рода войск до офицерского звания, даже при отсутствии прямой юрисдикции, если иные компетентные органы отсутствуют. Задержание допускается при нарушении внутреннего устава, арест при нарушении уголовного кодекса. Служащие Государственной гвардии аресту не подлежат и в любом случае передаются патрульной службе Гвардии. При осуществлении ареста вне своей юрисдикции сотрудник обязан за документировать его в Министерстве внутренних дел с предоставлением доказательств нарушения или на сервере своей структуры. Гвардейские подразделения обладают неприкосновенностью при выполнении своих охранных функций. Важно заметить, что при наличии рядом структуры, у которой есть юрисдикция над нарушителем, то стоит не арестовывать нарушителя, а передать его соответствующей структуре.</p>
-      <div class="stamp">Подписано: вице-канцлер Runhardt; канцлер EgOrKa_BIcXEr; адъютант Верховного лидера flaviusKrüger; министр внутренних дел Великокельветии C_wistfy.</div>
-    `
-  },
-  {
-    t:'О Государственном Управлении Безопасности',
-    num:'z.b.V. 360659 · 16 июля 1945 года',
-    tag:'Безопасность',
-    body:`
-      <p>Государственное Управление Безопасности является центральным органом управления безопасностью в пределах всего государства, обладающим полномочиями по координации и руководству всеми структурами, обеспечивающими защиту государственного суверенитета и внутреннего порядка. Руководство Управления наделяется неограниченными полномочиями в сфере управления государственной безопасностью, при этом Руководитель Главного управления безопасности и его заместитель подотчётны непосредственно государственному руководству, включая Государственную канцелярию и Офис Лидера.</p>
-      <p>В структуру Государственного Управления Безопасности входят: Министерство внутренних дел со всеми его подразделениями, Министерство юстиции со всеми его инстанциями, судебный аппарат Гвардии Лидера, аппарат безопасности Гвардии Лидера, а также Государственная служба разведки, которая является самостоятельной службой в составе Управления и подотчётна исключительно его руководству и, соответственно, государственному руководству.</p>
-      <div class="stamp">Подписано: адъютант Верховного лидера, TheLoyal.</div>
-    `
-  },
-  {
-    t:'О правительстве',
-    num:'z.b.V. 360658 · 16 июля 1945 года',
-    tag:'Правительство',
-    body:`
-      <p>Правительство Кельветии является коллегиальным органом государственной власти, осуществляющим исполнительное управление в рамках полномочий, установленных законодательством. Правительство входит в структуру Национальной лиги как её неотъемлемая часть, однако сохраняет оперативную самостоятельность в вопросах текущего государственного управления. Координация между Правительством и руководством Национальной лиги осуществляется на основе взаимодействия, а не подчинения. Правительство находится под прямым руководством Государственной канцелярии — ведомства Государственного канцлера, главы правительства.</p>
-      <p>Кабинет министров является основной составной частью Правительства. Изменения в структуре и составе Кабинета министров могут быть внесены только Канцлером или Вице-канцлером Великокельветского государства.</p>
-      <p><b>Государственное министерство пропаганды</b> обладает юрисдикцией в сфере духовного руководства Кельветской Нации, распространения информации о Государстве, культурной и экономической пропаганды, а также всех иных вопросах, касающихся искусства, культуры, кинематографа, выставок, литературы, радиовещания, музыки, прессы, государственного гимна и организационных структур. Министерство отвечает за управление всеми учреждениями, служащими указанным целям. Все пропагандистские материалы, используемые в официальных целях, должны быть созданы или одобрены Министерством пропаганды Государства. Свободное творческое и неофициальное искусство может производиться и распространяться всеми гражданами Кельветии.</p>
-      <p><b>Государственное министерство юстиции</b> наделено высшей судебной властью. Являясь центральным судебным органом Правительства, оно контролирует и регулирует судебную систему Государства, обеспечивая правосудие через свои различные суды.</p>
-      <p><b>Государственное министерство внутренних дел</b> обладает полной юрисдикцией в сферах правопорядка, внутренних дел и правоприменения. Оно является центральным органом, ответственным за координацию, руководство и управление всеми подразделениями и универсальными структурами в пределах своей компетенции для обеспечения безопасности Государства.</p>
-      <p><b>Государственное министерство иностранных дел</b> обладает полной юрисдикцией в сфере международных отношений Государства, включая экономические и производственные связи, и отвечает за представление Государства на международной арене.</p>
-      <p><b>Государственная квартирмейстерия</b> является особым подразделением Правительства, ответственным за поддержание, регулирование и создание униформы и наград. Она обладает полной и окончательной властью по всем вопросам квартирмейстерства.</p>
-      <div class="stamp">Подписано: адъютант Верховного Лидера; Motja_20; lasstdreamer.</div>
-    `
-  },
-  {
-    t:'О территориальных режимах',
-    num:'Z.b.V. 005 · 05.07.1945 · Канцелярия · Вице-канцлер',
-    tag:'Территории',
-    body:`
-      <p><b>I. ВОИНСКАЯ ЧАСТЬ</b></p>
-      <ul>
-        <li><b>а)</b> Правом на постоянное нахождение на территории воинской части Великокельветского государства наделяются исключительно: сухопутные и военно-воздушные силы, медицинская служба Национальной лиги, кавалерийский штадтарт «Марш» и ударный штадтарт «Кестринг» Национальной гвардии, а также Гвардия Лидера.</li>
-        <li><b>б)</b> Нахождение на территории воинской части иных формирований, не перечисленных выше, категорически воспрещается. Данные структуры имеют право находиться на территории частей исключительно по веским причинам, включая, но не ограничиваясь: отборами, тренировками, инспекциями.</li>
-        <li><b>в)</b> Штейгсмаршал и верховное руководство вооружённых сил Великокельветии уполномочены выдавать персональные разрешения на пребывание на территории части на установленный ими срок.</li>
-        <li><b>г)</b> Ответственность за соблюдением контрольно-пропускного режима возлагается на Полевую полицию вооружённых сил.</li>
-      </ul>
-      <p><b>II. АЭРОДРОМ</b></p>
-      <ul>
-        <li><b>а)</b> Правом на постоянное нахождение на территории аэродрома наделяются исключительно: военно-воздушные силы, медицинская служба Национальной лиги, полевая полиция вооружённых сил, центральный офис вооружённых сил, верховное руководство вооружённых сил.</li>
-        <li><b>б)</b> Нахождение на территории аэродрома иных формирований, не перечисленных выше, категорически воспрещается. Данные структуры имеют право находиться на территории исключительно с разрешения авиамаршала или штейгсмаршала.</li>
-        <li><b>в)</b> Ответственность за соблюдением контрольно-пропускного режима возлагается на полевую полицию вооружённых сил.</li>
-      </ul>
-      <p><b>III. ГОРОД И ПРИГОРОД</b></p>
-      <ul>
-        <li><b>а)</b> Правом на постоянное нахождение на территории города имеют все государственные служащие Великокельветского государства.</li>
-        <li><b>б)</b> Гражданская полиция, исходя из указа «О юрисдикциях полицейских структур» от 06/05/45, имеет высшую юрисдикцию в пределах города и пригорода.</li>
-        <li><b>в)</b> Ответственность за соблюдением контрольно-пропускного режима возлагается на пограничную службу Национальной гвардии и гражданскую полицию.</li>
-      </ul>
-      <p><b>IV. ШТАБ ГВАРДИИ ЛИДЕРА</b></p>
-      <ul>
-        <li><b>а)</b> Правом на постоянное нахождение на территории штаба Гвардии Лидера имеют исключительно гвардейцы Гвардии Лидера.</li>
-        <li><b>б)</b> Нахождение на территории штаба иных формирований категорически воспрещается. Данные структуры имеют право находиться на территории исключительно с разрешения штейгслидера Государственной гвардии или его личного штаба.</li>
-        <li><b>в)</b> Ответственность за соблюдением контрольно-пропускного режима возлагается на полевую полицию Гвардии Лидера.</li>
-      </ul>
-      <p><b>V. РЕЗИДЕНЦИЯ ВЕЧНОГО ЛИДЕРА</b></p>
-      <ul>
-        <li><b>а)</b> Правом на постоянное нахождение на территории резиденции Лидера имеет исключительно Гвардия Лидера.</li>
-        <li><b>б)</b> Нахождение на территории резиденции иных формирований категорически воспрещается. Данные структуры имеют право находиться на территории исключительно с разрешения Вечного Лидера, его офиса, штейгслидера Государственной гвардии или его личного штаба.</li>
-        <li><b>в)</b> Ответственность за соблюдением контрольно-пропускного режима возлагается на полевую полицию Гвардии Лидера.</li>
-      </ul>
-      <p><b>VI. ИСКЛЮЧЕНИЯ</b></p>
-      <ul>
-        <li><b>а)</b> Верховное командование имеет право на постоянное нахождение на всех территориях, за исключением резиденции Вечного Лидера.</li>
-        <li><b>б)</b> Офис безопасности Великокельветского государства имеет право на постоянное нахождение на всех территориях.</li>
-      </ul>
-    `
-  }
+  {t:'Об охране единства нации',num:'По воле Вождя',tag:'Идеология',body:`<p><b>I.</b> Все граждане, военнослужащие, сотрудники госструктур и члены партии равны перед лицом государства.</p><p><b>II.</b> Запрещены любые формы оскорблений, унижения, принижения чести, действия против единства.</p><p><b>III.</b> Обязанность — уважительное отношение в публичном и частном общении.</p><p><b>IV.</b> Нарушение — пресечение, вплоть до исключения, понижения, лишения званий.</p><p><b>V.</b> КSO обязаны следить и немедленно пресекать нарушения.</p><div class="stamp">Подписано: Lurgens Harald.</div>`},
+  {t:'Об охране нравственности',num:'z.b.V. 360655 · 30.05.1946',tag:'Нравственность',body:`<p>Запрещено распространение и публичная демонстрация материалов, противоречащих морально-этическим нормам: порнография, сцены жестокости/насилия, пропаганда дегенеративного поведения.</p><p>Полностью запрещены онлайн-отношения, груминг и любые сексуальные взаимодействия в цифровой среде.</p><p>Контроль — ГУБ / Государственная служба разведки. Анонимные жалобы принимаются.</p><p><b>Наказание:</b> ОЧС. Апелляция не предусмотрена. Помилование — Верховный Лидер.</p><div class="stamp">Подписано: адъютант Верховного Лидера flavius.</div>`},
+  {t:'О введении обязательной проверки на благонадёжность',num:'z.b.V. 360657 · 2 июля 1945',tag:'Кадры',body:`<p>Руководство всех официальных формирований (НГ, НЛ, ВС, Гвардия Лидера) обязано запрашивать Background Check на сервере SSA Outreach для каждого лица на штабную должность.</p><p><b>Запрещено</b> назначение на штабное командование без проверки.</p><p>Проверка действует до понижения лица до полевого командования и ниже.</p><div class="stamp">Подписано: адъютант Верховного Лидера flavius.</div>`},
+  {t:'О безопасности коммуникационных серверов Discord',num:'z.b.V. 360656 · 29 июня 1945',tag:'Discord',body:`<p>Админ-права госруководству: Statesuperadmin, Dead Statesadmin, Statesadministrator. Для Гвардии Лидера — с приставкой Leaders.</p><p>Модераторская роль — Statesmoderator / Leadersmoderator (без бана, удаления сервера, выдачи ролей).</p><p>Statesuperadmin / Leaderssuperadmin — только лидер формирования. На сервере подразделения админ-права имеет только его командир.</p><p>Dead-роли выдаются лидером формирования руководству при соответствии звания.</p><p>Роль Security Liaison — для подтверждённых сотрудников Криминальной полиции ОБК и ГРС. Доступ ко всем каналам, журналу аудита, право на мут и удаление сообщений.</p><p>Каждый сервер — регистрация на SSA Outreach, обязательный бот автоматизации и бот Security (не выше вице-канцлера).</p><div class="stamp">Подписано: адъютант Верховного Лидера flavius.</div>`},
+  {t:'О мобилизации',num:'z.b.V. 360656 · 11 мая 1945',tag:'Мобилизация',body:`<p>При наличии 12+ вражеских бойцов или прямой угрозы городу / военной части — все боевые подразделения обязаны немедленно мобилизоваться.</p><p>Вспомогательные структуры (медслужба и др.) — помогают: медпункты, КПП, контроль города.</p><p>Не прибывшие на фронт при наличии условий — <b>дезертиры</b>.</p><p>Полевая полиция «Black Prince» при военном положении получает расширенную юрисдикцию: организация КПП, проверка документов, приказы о направлении на фронт, арест дезертиров (кроме Госгвардии).</p><p>Патрульная служба Госгвардии — аналогичные полномочия в подразделениях Гвардии.</p><div class="stamp">Подписано: вице-канцлер Runhardt; канцлер EgOrKa_BIcXEr; секретарь Motja_20.</div>`},
+  {t:'О подчинённости Национальной гвардии',num:'z.b.V. 360655 · 6 мая 1946',tag:'НГ',body:`<p>Председатель НЛ обладает исключительным правом реформ в НГ (с обсуждением маршала НГ). Секретарь и заместитель Председателя НЛ — совещательный голос.</p><p>Указы Председателя НЛ — высшая юридическая сила в НГ. Не распространяются на внутренние уставы подразделений.</p><p>Права Председателя НЛ: мобилизация, ЧП, режим повышенной готовности, обязательные приказы личному составу, аудит логистики, созыв руководства.</p><p>Служебные взыскания — до штабного командования включительно, после обсуждения с руководством НГ и подразделения.</p><p>Маршал НГ — партийное звание Statesleader.</p><div class="stamp">Подписано: вице-канцлер Runhardt; канцлер EgOrKa_BIcXEr.</div>`},
+  {t:'О порядке выдачи ветеранства и почётного гражданства',num:'Directive 03 · 24.09.1945',tag:'Награды',body:`<p><b>Ветеранство:</b> служба не менее 9 месяцев + командная должность от штабного и выше не менее 3 месяцев. Доп. стандарт — служба в прошлых проектах LuigenHub.</p><p><b>Почётное гражданство:</b> вклад в культуру / экономику / политику / военную деятельность. Кавалерам ордена Кельветии или Лидера. Выдающимся деятелям прошлых проектов LuigenHub.</p><p>Также — бывшим членам Верховного командования, Офиса Канцлера или Офиса Лидера.</p><p>Право выдачи: Верховный Лидер и его офис, Канцлер и его офис, Министр внутренних дел и его бюро.</p><div class="stamp">Statesminister of the Interior: lasstdreamer.</div>`},
+  {t:'О двойной службе',num:'z.b.V. 360652 · 24 августа 1945',tag:'Кадры',body:`<p><b>Вторичные подразделения:</b> Медслужба НЛ, Государственная квартирмейстерия, Боевая группа «1001 ночь», Государственная комиссия по связи, Организация Торн.</p><p>Для служащих Гвардии Лидера — Военный трибунал Гвардии Лидера, Главное управление Гвардии Лидера, Юнкерская школа Гвардии Лидера.</p><p>Для ВС — Центральное управление ВС и Военная школа ВС (для Армии — Административное управление Армии, для ВВС — Административное управление ВВС).</p><p>Для НГ — Административное управление НГ и Академия руководителей НГ.</p><p>Для всех граждан (кроме Гвардии Лидера) — Министерство пропаганды и Министерство юстиции.</p><p>Разрешается не более одного первичного + одного вторичного. Нельзя штабные должности в обоих одновременно. Сотрудникам офиса безопасности вторичная служба запрещена.</p><div class="stamp">Подписано: заместитель Верховного Лидера flavius.</div>`},
+  {t:'О юрисдикциях полицейских структур',num:'z.b.V. 360655 · 6 мая 1945',tag:'Полиция',body:`<p><b>Полевая полиция «Black Prince»</b> — все военнослужащие сухопутных и ВВС в званиях от солдата до лейтенанта включительно. Контроль въезда/выезда с воинских частей. Документы у всех, кроме Госгвардии. Гражданские за пределами города.</p><p><b>Гражданская полиция</b> — служащие НЛ и НГ в рядовых и офицерских званиях. Гражданские в городе. Контроль въезда/выезда города (кроме Госгвардии).</p><p><b>Патрульная служба Госгвардии</b> — служащие Госгвардии в рядовых и офицерских званиях. Все рода войск и гражданские вокруг резиденции Верховного Лидера. Контроль въезда/выезда резиденции.</p><p><b>Офис безопасности Кельветии</b> — все рода войск в любом звании.</p><p><b>Пограничная служба НГ</b> — ЖД вокзал. Все рода войск, кроме Госгвардии. До унтер-офицера.</p><p>Срочное задержание — до офицерского звания при отсутствии компетентных органов. Госгвардия — аресту не подлежит, передаётся патрульной службе Гвардии.</p><div class="stamp">Подписано: вице-канцлер Runhardt; канцлер EgOrKa_BIcXEr; адъютант Верховного лидера flaviusKrüger; министр внутренних дел C_wistfy.</div>`},
+  {t:'О Государственном Управлении Безопасности',num:'z.b.V. 360659 · 16 июля 1945',tag:'Безопасность',body:`<p>ГУБ — центральный орган управления безопасностью. Руководитель ГУБ и его заместитель подотчётны Государственной канцелярии и Офису Лидера.</p><p><b>Структура ГУБ:</b> МВД со всеми подразделениями, Минюст со всеми инстанциями, судебный аппарат Гвардии Лидера, аппарат безопасности Гвардии Лидера, Государственная служба разведки.</p><div class="stamp">Подписано: адъютант Верховного лидера TheLoyal.</div>`},
+  {t:'О правительстве',num:'z.b.V. 360658 · 16 июля 1945',tag:'Правительство',body:`<p>Правительство — коллегиальный орган исполнительной власти. Входит в структуру НЛ как неотъемлемая часть, сохраняя оперативную самостоятельность. Под прямым руководством Государственной канцелярии.</p><p>Кабинет министров — основная часть. Изменения — только Канцлер или Вице-канцлер.</p><p><b>Министерство пропаганды</b> — духовное руководство Нации, культура, СМИ, гимн, организационные структуры.</p><p><b>Министерство юстиции</b> — высшая судебная власть, контролирует судебную систему.</p><p><b>Министерство внутренних дел</b> — правопорядок, координация и руководство подразделениями.</p><p><b>Министерство иностранных дел</b> — международные отношения.</p><p><b>Государственная квартирмейстерия</b> — униформа, награды.</p><div class="stamp">Подписано: адъютант Верховного Лидера; Motja_20; lasstdreamer.</div>`},
+  {t:'О территориальных режимах',num:'Z.b.V. 005 · 05.07.1945',tag:'Территории',body:`<p><b>I. Воинская часть:</b> ВС, ВВС, медслужба НЛ, штадтарты НГ «Марш» и «Кестринг», Гвардия Лидера. Разрешения — штейгсмаршал / верховное руководство ВС. КПП — Полевая полиция ВС.</p><p><b>II. Аэродром:</b> ВВС, медслужба НЛ, полевая полиция ВС, центральный офис ВС, верховное руководство ВС. Разрешения — авиамаршал / штейгсмаршал.</p><p><b>III. Город и пригород:</b> все госслужащие. Высшая юрисдикция — Гражданская полиция. КПП — Пограничная служба НГ и Гражданская полиция.</p><p><b>IV. Штаб Гвардии Лидера:</b> только гвардейцы. Иные — с разрешения штейгслидера Госгвардии. КПП — Полевая полиция Гвардии Лидера.</p><p><b>V. Резиденция Вечного Лидера:</b> только Гвардия Лидера. Иные — с разрешения Вечного Лидера / его офиса / штейгслидера Госгвардии.</p><p><b>VI. Исключения:</b> Верховное командование — все территории, кроме резиденции. ОБК — все территории.</p>`}
 ];
 
 document.getElementById('decreeBox').innerHTML = DECREES.map((d,i) => `
@@ -1134,23 +779,17 @@ let goTo = function(id){
 };
 links.forEach(l=>l.addEventListener('click', e=>{e.preventDefault(); goTo(l.dataset.target)}));
 document.querySelectorAll('[data-goto]').forEach(c=>c.addEventListener('click', ()=>goTo(c.dataset.goto)));
-
-/* восстановление из хэша */
 (function(){
   const h = location.hash.slice(1);
   if(h && document.getElementById(h)) goTo(h);
 })();
 
-/* ============================================================
-   АККОРДЕОНЫ
-   ============================================================ */
+/* аккордеоны */
 document.querySelectorAll('.acc-h').forEach(h=>{
   h.addEventListener('click', ()=>h.parentElement.classList.toggle('open'));
 });
 
-/* ============================================================
-   ТЕМА И КНОПКА НАВЕРХ
-   ============================================================ */
+/* тема */
 (function(){
   const root = document.documentElement;
   try{ if(localStorage.getItem('grp_theme')==='dark') root.dataset.theme='dark'; }catch(e){}
@@ -1164,9 +803,7 @@ document.querySelectorAll('.acc-h').forEach(h=>{
   top.onclick = ()=> scrollTo({top:0,behavior:'smooth'});
 })();
 
-/* ============================================================
-   ПОИСК
-   ============================================================ */
+/* поиск */
 (function(){
   const gs = document.getElementById('globalSearch');
   gs.addEventListener('keydown', e=>{
@@ -1196,6 +833,54 @@ document.querySelectorAll('.acc-h').forEach(h=>{
   });
   document.addEventListener('keydown', e=>{
     if((e.ctrlKey||e.metaKey) && e.key.toLowerCase() === 'k'){ e.preventDefault(); gs.focus(); }
+  });
+})();
+
+/* ============================================================
+   ФОРМА АНОНИМНОГО ОБРАЩЕНИЯ
+   ⚠️ ЗАМЕНИ ENDPOINT на URL своего Cloudflare Worker
+   ============================================================ */
+(function(){
+  const ENDPOINT = 'https://grp-form.YOUR-SUBDOMAIN.workers.dev/'; // ← замени!
+  const form = document.getElementById('reportForm');
+  const btn = document.getElementById('reportBtn');
+  const status = document.getElementById('reportStatus');
+  if(!form) return;
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    btn.disabled = true;
+    btn.textContent = 'Отправка…';
+    status.textContent = '';
+
+    const data = {
+      target: form.target.value,
+      date: form.date.value,
+      articles: form.articles.value,
+      description: form.description.value,
+      evidence: form.evidence.value,
+      confirmed: form.confirmed.checked,
+      website: form.website.value
+    };
+
+    try {
+      const r = await fetch(ENDPOINT, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+      });
+      const j = await r.json().catch(()=>({}));
+      if(!r.ok) throw new Error(j.error || 'Ошибка отправки');
+      form.reset();
+      status.style.color = 'var(--green)';
+      status.textContent = '✅ Обращение отправлено. Спасибо.';
+    } catch(err){
+      status.style.color = 'var(--red)';
+      status.textContent = '⚠ ' + (err.message || 'Не удалось отправить. Попробуйте позже.');
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Отправить анонимно';
+    }
   });
 })();
 </script>
