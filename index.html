@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Кабинет SMJ — Великокельветское государство</title>
+<title>Справочник ГРП — Великокельветское государство</title>
 <style>
 :root{
   --navy:#0f2440; --navy-2:#16325c; --accent:#2f6fd0; --gold:#c8a24a;
@@ -56,33 +56,6 @@ ul.plain li,ol.plain li{margin-bottom:5px}
 .quick .qi{font-size:22px}
 .quick .qt{font-weight:600;font-size:14.5px;color:var(--navy)}
 .quick .qd{font-size:12.5px;color:var(--muted)}
-.algo{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:14px;overflow:hidden;box-shadow:var(--shadow)}
-.algo-head{padding:15px 20px;cursor:pointer;display:flex;align-items:center;gap:12px;transition:.15s;user-select:none}
-.algo-head:hover{background:#f7fafd}
-.algo-head .num{flex:0 0 30px;height:30px;border-radius:8px;background:#e8f0fb;color:var(--accent);display:grid;place-items:center;font-weight:700;font-size:13px}
-.algo-head .t{flex:1;font-weight:600;font-size:15px;color:var(--navy)}
-.algo-head .law{font-size:11.5px;color:var(--muted);background:#f1f4f8;padding:3px 9px;border-radius:20px;white-space:nowrap}
-.algo-head .arrow{color:var(--muted);transition:.25s;font-size:12px}
-.algo.open .algo-head .arrow{transform:rotate(90deg)}
-.algo-body{display:none;padding:0 20px 20px 20px;border-top:1px solid var(--border)}
-.algo.open .algo-body{display:block}
-.progress{height:5px;background:#e8eef6;border-radius:3px;margin:14px 0 16px;overflow:hidden}
-.progress i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#4b8ee0);width:0%;transition:width .3s ease;border-radius:3px}
-.step{display:flex;gap:11px;padding:9px 12px;border-radius:8px;transition:.15s;align-items:flex-start;cursor:pointer}
-.step:hover{background:#f5f8fc}
-.step .box{flex:0 0 19px;height:19px;border:2px solid #c3cfdd;border-radius:5px;margin-top:1px;display:grid;place-items:center;transition:.15s;background:#fff}
-.step .box::after{content:"✓";font-size:12px;color:#fff;opacity:0;font-weight:700}
-.step.done .box{background:var(--green);border-color:var(--green)}
-.step.done .box::after{opacity:1}
-.step.done .txt{color:var(--muted);text-decoration:line-through;text-decoration-color:#b8c6d6}
-.step .txt{font-size:14px;flex:1}
-.step .ref{font-size:11.5px;color:var(--accent);background:#eef4fd;padding:2px 8px;border-radius:20px;white-space:nowrap;margin-left:8px;font-weight:500}
-.step.warn .txt::before{content:"⚠ ";color:var(--amber)}
-.algo-foot{display:flex;gap:10px;margin-top:14px;padding-top:14px;border-top:1px dashed var(--border)}
-.btn{font-size:12.5px;padding:7px 14px;border-radius:7px;border:1px solid var(--border);background:#fff;color:var(--muted);cursor:pointer;transition:.15s;font-family:inherit}
-.btn:hover{border-color:var(--accent);color:var(--accent)}
-.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
-.btn.primary:hover{background:#255cb5}
 table{width:100%;border-collapse:collapse;font-size:13.5px;margin:8px 0 16px}
 th{text-align:left;padding:10px 12px;background:#f0f5fb;color:var(--navy);font-weight:600;font-size:12.5px;text-transform:uppercase;letter-spacing:.4px;border-bottom:2px solid #dbe6f3}
 td{padding:10px 12px;border-bottom:1px solid #eef3f9;vertical-align:top}
@@ -109,10 +82,6 @@ td.law{color:var(--accent);font-size:12.5px;white-space:nowrap}
 .note.blue{border-left-color:var(--accent);background:#f2f7fd}
 .note.green{border-left-color:var(--green);background:#f3fbf7}
 .note b{color:var(--navy)}
-.pill-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
-.pill{font-size:12.5px;padding:6px 13px;border-radius:20px;border:1px solid var(--border);background:#fff;cursor:pointer;transition:.15s;font-family:inherit;color:var(--muted)}
-.pill:hover{border-color:var(--accent);color:var(--accent)}
-.pill.active{background:var(--accent);color:#fff;border-color:var(--accent)}
 .empty{padding:30px;text-align:center;color:var(--muted);font-size:14px}
 footer{text-align:center;padding:26px 20px;color:var(--muted);font-size:12.5px;border-top:1px solid var(--border);margin-top:20px}
 .crime{background:#fff;border:1px solid var(--border);border-radius:9px;padding:12px 15px;margin-bottom:8px}
@@ -121,13 +90,10 @@ footer{text-align:center;padding:26px 20px;color:var(--muted);font-size:12.5px;b
 .crime p{font-size:13px;color:#3a4a5e;margin-bottom:6px}
 .crime .pen{font-size:12.5px;color:var(--red);font-weight:600;background:#fdf4f3;padding:5px 10px;border-radius:6px;display:inline-block}
 .crime .cr-badge{background:#fdecea;color:var(--red);font-size:10.5px;font-weight:700;padding:2px 7px;border-radius:5px;letter-spacing:.5px}
-.hot{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin-bottom:6px}
-.hot div{border:1px solid var(--border);border-left:4px solid var(--gold);border-radius:8px;padding:10px 12px;font-size:12.5px;color:var(--muted)}
-.hot div b{display:block;font-size:16px;color:var(--navy-2);margin-bottom:3px}
 #toTop{display:none;position:fixed;right:20px;bottom:20px;width:44px;height:44px;border-radius:50%;border:none;background:var(--accent);color:#fff;font-size:20px;cursor:pointer;box-shadow:var(--shadow);z-index:60}
 html[data-theme=dark]{--bg:#0d131b;--card:#151e2a;--text:#e3e9f1;--muted:#92a2b8;--border:#263446}
-html[data-theme=dark] .card>h2,html[data-theme=dark] h3,html[data-theme=dark] h4,html[data-theme=dark] .quick .qt,html[data-theme=dark] .algo-head .t,html[data-theme=dark] .crime h5,html[data-theme=dark] .hero h2{color:#a9c8ff}
-html[data-theme=dark] .algo-head:hover,html[data-theme=dark] .step:hover,html[data-theme=dark] tr:hover td{background:#1c2837}
+html[data-theme=dark] .card>h2,html[data-theme=dark] h3,html[data-theme=dark] h4,html[data-theme=dark] .quick .qt,html[data-theme=dark] .crime h5,html[data-theme=dark] .hero h2{color:#a9c8ff}
+html[data-theme=dark] .step:hover,html[data-theme=dark] tr:hover td{background:#1c2837}
 html[data-theme=dark] nav a:hover{background:#1c2837}
 html[data-theme=dark] th{background:#1c2837;color:var(--text)}
 html[data-theme=dark] .crime{background:#151e2a}
@@ -151,7 +117,7 @@ html[data-theme=dark] .acc{background:#151e2a}
 <header>
   <div class="logo">⚙️</div>
   <div>
-    <h1>Кабинет SMJ · Великокельветское государство</h1>
+    <h1>Справочник ГРП · Великокельветское государство</h1>
     <p>Уголовный кодекс · Процессуальный кодекс · Указы · Юрисдикции</p>
   </div>
   <div class="spacer"></div>
@@ -180,9 +146,7 @@ html[data-theme=dark] .acc{background:#151e2a}
         <li><a href="#" data-target="decrees">📜 Указы правительства</a></li>
         <div class="navgroup">Практика</div>
         <li><a href="#" data-target="penalties">🎯 Виды наказаний</a></li>
-        <li><a href="#" data-target="algos">📋 Алгоритмы</a></li>
         <li><a href="#" data-target="memo">💡 Памятки</a></li>
-        <li><a href="#" data-target="materials">📁 Материалы</a></li>
       </ul>
     </nav>
   </aside>
@@ -192,8 +156,8 @@ html[data-theme=dark] .acc{background:#151e2a}
     <!-- ================ ГЛАВНАЯ ================ -->
     <section id="dashboard" class="visible">
       <div class="hero">
-        <h2>Рабочий справочник сотрудника Министерства юстиции</h2>
-        <p>Полная база законодательства Великокельветского государства: Уголовный кодекс (4 уровня), Процессуальный кодекс, Положение о МЮ, Указы правительства и внутренние регламенты. Отмечайте шаги в алгоритмах — прогресс сохраняется в браузере.</p>
+        <h2>Справочник Великокельветского государства</h2>
+        <p>Полная база законодательства ГРП: Уголовный кодекс (4 уровня), Процессуальный кодекс, Положение о МЮ, Указы правительства и внутренние регламенты.</p>
       </div>
 
       <div class="card">
@@ -224,18 +188,6 @@ html[data-theme=dark] .acc{background:#151e2a}
           </tbody>
         </table>
         <div class="note red"><b>Отметка (CR).</b> Ряд статей имеет пометку (CR) — за них присваивается судимость в государственной базе данных, которая исключает повышение на должность выше штабного командования. По решению суда судимость может не присваиваться, если это прямо указано в приговоре.</div>
-      </div>
-
-      <div class="card">
-        <h2>Критичные сроки</h2>
-        <p class="sub">То, что чаще всего горит на службе</p>
-        <div class="hot">
-          <div><b>24 часа</b>уведомить судью и участников о заседании (ст. 7.1 УПК)</div>
-          <div><b>500 сек</b>максимальный срок ареста по базовым составам</div>
-          <div><b>7 дней</b>мут — за деструктив и запрещённый контент</div>
-          <div><b>30 дней</b>блокировка аккаунта — за системные нарушения</div>
-          <div><b>90 дней</b>блокировка — за сексуальную эксплуатацию</div>
-        </div>
       </div>
 
       <div class="card">
@@ -277,7 +229,7 @@ html[data-theme=dark] .acc{background:#151e2a}
     <section id="uk4">
       <div class="card">
         <h2>Уголовный кодекс · Уровень 4 <span class="badge">особо тяжкие</span></h2>
-        <p class="sub">Серьёзные преступления от любого лица. По большинству — <b>предел наказания не ограничен</b> (см. ст. 4.6 УПК). Ряд статей предусматривает ОЧС.</p>
+        <p class="sub">Серьёзные преступления от любого лица. По большинству — <b>предел наказания не ограничен</b>. Ряд статей предусматривает ОЧС.</p>
         <div id="crimes4"></div>
       </div>
     </section>
@@ -695,20 +647,6 @@ html[data-theme=dark] .acc{background:#151e2a}
       </div>
     </section>
 
-    <!-- ================ АЛГОРИТМЫ ================ -->
-    <section id="algos">
-      <div class="card">
-        <h2>Алгоритмы действий <span class="badge">чек-листы</span></h2>
-        <p class="sub">Пошаговые последовательности. Отметки сохраняются в браузере.</p>
-        <div class="pill-row">
-          <button class="pill" data-expand="all">Развернуть все</button>
-          <button class="pill" data-expand="none">Свернуть все</button>
-          <button class="pill" data-reset="1">Сбросить отметки</button>
-        </div>
-        <div id="algoContainer"></div>
-      </div>
-    </section>
-
     <!-- ================ ПАМЯТКИ ================ -->
     <section id="memo">
       <div class="card">
@@ -762,16 +700,6 @@ html[data-theme=dark] .acc{background:#151e2a}
           <li>Соблюдать нормы этики;</li>
           <li>Приходить вовремя — иначе неуважение к Суду.</li>
         </ul>
-      </div>
-    </section>
-
-    <!-- ================ МАТЕРИАЛЫ ================ -->
-    <section id="materials">
-      <div class="card">
-        <h2>Материалы</h2>
-        <p class="sub">Бланки, образцы, ссылки</p>
-        <p>Чтобы добавить файл: положи его в папку <code>files/</code> в репозитории и пропиши в массиве MATERIALS в JS (см. комментарий в коде).</p>
-        <div id="materialsBox"></div>
       </div>
     </section>
 
@@ -984,202 +912,6 @@ document.getElementById('decreeBox').innerHTML = DECREES.map((d,i) => `
   </div>`).join('');
 
 /* ============================================================
-   АЛГОРИТМЫ
-   ============================================================ */
-const ALGOS = [
-  {
-    id:'a1', title:'Задержание нарушителя (общий порядок)', law:'УК · УПК · Указ о юрисдикциях',
-    steps:[
-      {t:'Проверить свою юрисдикцию по указу z.b.V. 360655 и примечаниям', w:1},
-      {t:'Убедиться, что лицо не является сотрудником SMJ при исполнении (неприкосновенность)', w:1},
-      {t:'Убедиться, что у лица нет статуса, требующего особого разрешения (Офис Лидера, ГБ, Канцелярия, Правительство)'},
-      {t:'При необходимости — получить ордер (для Прокуратуры — только через уголовную/тайную полицию)', w:1},
-      {t:'Сообщить лицу о задержании и причине'},
-      {t:'Провести задержание, соблюдая правила применения силы (превышение — преступление)'},
-      {t:'Обыскать задержанного при необходимости'},
-      {t:'Составить протокол: место, дата, время, ФИО, данные лица, основания, действия'},
-      {t:'Уведомить соответствующую структуру, если задержанный относится к иной юрисдикции'},
-      {t:'Передать материалы в Прокуратуру либо освободить, если состав не подтверждён'},
-      {t:'Если нарушитель — служащий Госгвардии: аресту не подлежит, передаётся патрульной службе Гвардии', w:1}
-    ]
-  },
-  {
-    id:'a2', title:'Составление протокола', law:'УПК · УК',
-    steps:[
-      {t:'Указать место и дату производства'},
-      {t:'Указать время начала и окончания с точностью до минуты'},
-      {t:'Указать должность, ФИО, звание сотрудника'},
-      {t:'Указать данные всех участников (ФИО, ник, принадлежность)'},
-      {t:'Описать содержание и последовательность действий'},
-      {t:'Указать применённые технические средства и результаты'},
-      {t:'Внести заявления и замечания участников'},
-      {t:'Ознакомить участников с протоколом'},
-      {t:'Собрать подписи всех участников; при отказе — сделать отметку'},
-      {t:'Направить копию в Прокуратуру при необходимости'}
-    ]
-  },
-  {
-    id:'a3', title:'Обращение в суд / подготовка заседания', law:'УПК · ст. 7',
-    steps:[
-      {t:'Убедиться, что материалы дела достаточны для передачи в суд'},
-      {t:'Определить подсудность: Statescourt / Stateschamber of Peoples Justice / SCM / SLC', w:1},
-      {t:'Судья обязан назначить заседание не позже чем за 24 часа до начала', w:1},
-      {t:'Судебный секретарь рассылает повестки по поручению судьи'},
-      {t:'Проверить у участников актуальный Discord', w:1},
-      {t:'Определить форму заседания: открытое / закрытое / заочное'},
-      {t:'Для открытого — привлечь судебного пристава для порядка'},
-      {t:'Удостовериться в личности участников (конфиденциальность не действует)'}
-    ]
-  },
-  {
-    id:'a4', title:'Проведение судебного заседания', law:'УПК · ст. 9',
-    steps:[
-      {t:'Вход судьи — все встают. Объявление дела: «Слушается дело [название] по обвинению [ник] в совершении преступления, предусмотренного ст. […] УК Кельветии»'},
-      {t:'Проверка явки: стороны представляются, секретарь докладывает'},
-      {t:'Разъяснение права на отвод. При отводе — заслушать мнение, вынести мотивированное определение'},
-      {t:'Определение режима: «Слушание проводится в [открытом/закрытом] режиме»'},
-      {t:'Разъяснение прав участникам (знакомство, ходатайства, отводы, доказательства, возражения)'},
-      {t:'Разъяснение обязанностей (являться, соблюдать этику, раскрыть личность суду)'},
-      {t:'Разъяснение правил поведения: обращение «Ваша Честь», запрет оружия/брони/шума'},
-      {t:'Ходатайства до рассмотрения по существу (об истребовании доказательств, вызове свидетелей, отложении)'},
-      {t:'Изложение обвинения прокурором'},
-      {t:'Позиция защиты: «Признаёте ли Вы себя виновным?»'},
-      {t:'Исследование доказательств: обвинение → перекрёстный допрос → защита → перекрёстный допрос'},
-      {t:'Показания свидетелей и экспертов (предупредить об ответственности за ложные показания)'},
-      {t:'Завершение исследования доказательств'},
-      {t:'Прения: речь обвинителя, речь защиты, реплики (1–2 мин)'},
-      {t:'Последнее слово подсудимого (никто не вправе прерывать)'},
-      {t:'Удаление в совещательную комнату → возвращение → оглашение приговора'},
-      {t:'Разъяснение порядка обжалования (НСП — обжалованию не подлежит)'},
-      {t:'Закрытие заседания'}
-    ]
-  },
-  {
-    id:'a5', title:'Проверка нарушения при задержании', law:'УПК · УК',
-    steps:[
-      {t:'Убедиться, что имеется состав преступления (ст. 1.1 УК: виновность, общественная опасность, противоправность, наказуемость)'},
-      {t:'Проверить наличие обстоятельств, исключающих преступность (ст. 3.1: оборона, задержание, риск)', w:1},
-      {t:'Проверить форму вины (умысел — прямой/косвенный; неосторожность — небрежность/легкомыслие)'},
-      {t:'Учесть малозначительность (ст. 1.2) — не признаётся преступлением'},
-      {t:'Учесть совокупность (ст. 1.3) — ответственность за каждое преступление отдельно'},
-      {t:'Учесть покушение (ст. 1.4) — наказание не более половины'},
-      {t:'Проверить соучастие (ст. 2.1–2.4): исполнитель, организатор, подстрекатель, пособник — все отвечают в равном объёме'},
-      {t:'Учесть смягчающие обстоятельства (ст. 4.3)'},
-      {t:'Учесть отягчающие обстоятельства (группа, ненависть, месть, особая жестокость, повторность)'}
-    ]
-  },
-  {
-    id:'a6', title:'Проверка на благонадёжность (Background Check)', law:'Указ z.b.V. 360657',
-    steps:[
-      {t:'Определить, подпадает ли должность под требование проверки (штабное командование и выше)', w:1},
-      {t:'Отправить запрос на сервер SSA Outreach в отношении назначаемого лица'},
-      {t:'Дождаться результата проверки'},
-      {t:'При положительном результате — назначение возможно'},
-      {t:'При отрицательном — назначение на штабное командование запрещено', w:1},
-      {t:'Учесть, что проверка сохраняет силу до момента понижения лица до полевого командования и ниже'}
-    ]
-  }
-];
-
-/* ---------- РЕНДЕР АЛГОРИТМОВ ---------- */
-function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
-const algoBox = document.getElementById('algoContainer');
-ALGOS.forEach((a, idx) => {
-  const el = document.createElement('div');
-  el.className = 'algo'; el.dataset.id = a.id;
-  el.innerHTML = `
-    <div class="algo-head">
-      <div class="num">${idx+1}</div>
-      <div class="t">${esc(a.title)}</div>
-      <div class="law">${esc(a.law)}</div>
-      <div class="arrow">▶</div>
-    </div>
-    <div class="algo-body">
-      <div class="progress"><i></i></div>
-      ${a.steps.map((s,i)=>`
-        <label class="step ${s.w?'warn':''}" data-key="${a.id}_${i}">
-          <span class="box"></span>
-          <span class="txt">${esc(s.t)}</span>
-          ${s.r?`<span class="ref">${esc(s.r)}</span>`:''}
-        </label>`).join('')}
-      <div class="algo-foot">
-        <button class="btn" data-clear="${a.id}">Сбросить шаги</button>
-        <button class="btn" data-all="${a.id}">Отметить все</button>
-      </div>
-    </div>`;
-  algoBox.appendChild(el);
-});
-
-const STORE_KEY = 'grp_checklist_v1';
-let state = (()=>{try{return JSON.parse(localStorage.getItem(STORE_KEY)||'{}')}catch(e){return{}}})();
-function saveState(){try{localStorage.setItem(STORE_KEY,JSON.stringify(state))}catch(e){}}
-function updateProgress(id){
-  const algo = document.querySelector(`.algo[data-id="${id}"]`);
-  if(!algo) return;
-  const steps = algo.querySelectorAll('.step');
-  const done = algo.querySelectorAll('.step.done').length;
-  const pct = steps.length ? Math.round(done/steps.length*100) : 0;
-  algo.querySelector('.progress i').style.width = pct + '%';
-}
-function applyState(){
-  document.querySelectorAll('.step').forEach(st=>{
-    if(state[st.dataset.key]) st.classList.add('done'); else st.classList.remove('done');
-  });
-  document.querySelectorAll('.algo').forEach(a=>updateProgress(a.dataset.id));
-}
-algoBox.addEventListener('click', e=>{
-  const head = e.target.closest('.algo-head');
-  if(head){ head.parentElement.classList.toggle('open'); }
-});
-document.querySelectorAll('.step').forEach(st=>{
-  st.addEventListener('click', e=>{
-    e.preventDefault();
-    const k = st.dataset.key;
-    if(state[k]){ delete state[k]; st.classList.remove('done'); }
-    else { state[k]=1; st.classList.add('done'); }
-    saveState(); updateProgress(st.closest('.algo').dataset.id);
-  });
-});
-document.querySelectorAll('[data-clear]').forEach(b=>{
-  b.addEventListener('click', ()=>{
-    const id = b.dataset.clear;
-    document.querySelectorAll(`.algo[data-id="${id}"] .step`).forEach(st=>{delete state[st.dataset.key]; st.classList.remove('done')});
-    saveState(); updateProgress(id);
-  });
-});
-document.querySelectorAll('[data-all]').forEach(b=>{
-  b.addEventListener('click', ()=>{
-    const id = b.dataset.all;
-    document.querySelectorAll(`.algo[data-id="${id}"] .step`).forEach(st=>{state[st.dataset.key]=1; st.classList.add('done')});
-    saveState(); updateProgress(id);
-  });
-});
-document.querySelectorAll('[data-expand]').forEach(b=>{
-  b.addEventListener('click', ()=>{
-    const open = b.dataset.expand === 'all';
-    document.querySelectorAll('.algo').forEach(a=>a.classList.toggle('open', open));
-  });
-});
-document.querySelector('[data-reset]')?.addEventListener('click', ()=>{
-  if(!confirm('Сбросить все отметки?')) return;
-  state = {}; saveState(); applyState();
-});
-applyState();
-
-/* ============================================================
-   МАТЕРИАЛЫ
-   ============================================================ */
-const MATERIALS = [
-  // {cat:'smj', title:'Образец протокола', file:'files/protokol.docx'},
-];
-const mb = document.getElementById('materialsBox');
-if(MATERIALS.length){
-  mb.innerHTML = '<div class="filegrid">'+MATERIALS.map(m=>`<a class="file" href="${m.file}" target="_blank">📄 ${m.title}</a>`).join('')+'</div>';
-} else {
-  mb.innerHTML = '<div class="empty">Материалы пока не добавлены. Инструкция — в комментарии внутри <code>index.html</code>.</div>';
-}
-
-/* ============================================================
    НАВИГАЦИЯ
    ============================================================ */
 const links = document.querySelectorAll('nav a[data-target]');
@@ -1207,7 +939,7 @@ document.querySelectorAll('.acc-h').forEach(h=>{
 });
 
 /* ============================================================
-   ТЕМА
+   ТЕМА И КНОПКА НАВЕРХ
    ============================================================ */
 (function(){
   const root = document.documentElement;
@@ -1217,7 +949,6 @@ document.querySelectorAll('.acc-h').forEach(h=>{
     root.dataset.theme = d ? 'light' : 'dark';
     try{ localStorage.setItem('grp_theme', d?'light':'dark'); }catch(e){}
   };
-  /* кнопка наверх */
   const top = document.getElementById('toTop');
   addEventListener('scroll', ()=> top.style.display = scrollY>500?'block':'none');
   top.onclick = ()=> scrollTo({top:0,behavior:'smooth'});
@@ -1232,7 +963,7 @@ document.querySelectorAll('.acc-h').forEach(h=>{
     if(e.key !== 'Enter') return;
     const q = gs.value.trim().toLowerCase();
     if(!q) return;
-    /* ищем по УК */
+    /* УК */
     for(const level of [1,2,3,4]){
       const found = CRIMES[level].find(c => c.t.toLowerCase().includes(q) || c.d.toLowerCase().includes(q) || c.n.includes(q));
       if(found){
@@ -1245,7 +976,7 @@ document.querySelectorAll('.acc-h').forEach(h=>{
         return;
       }
     }
-    /* указы */
+    /* Указы */
     const idx = DECREES.findIndex(d => d.t.toLowerCase().includes(q) || d.d.toLowerCase().includes(q));
     if(idx>=0){
       goTo('decrees');
@@ -1253,19 +984,8 @@ document.querySelectorAll('.acc-h').forEach(h=>{
         const accs = document.querySelectorAll('#decreeBox .acc');
         if(accs[idx]){ accs[idx].classList.add('open'); accs[idx].scrollIntoView({behavior:'smooth',block:'center'}); }
       }, 100);
-      return;
-    }
-    /* алгоритмы */
-    const a = ALGOS.find(a => a.title.toLowerCase().includes(q) || a.steps.some(s=>s.t.toLowerCase().includes(q)));
-    if(a){
-      goTo('algos');
-      setTimeout(()=>{
-        const el = document.querySelector(`.algo[data-id="${a.id}"]`);
-        if(el){ el.classList.add('open'); el.scrollIntoView({behavior:'smooth',block:'start'}); }
-      }, 100);
     }
   });
-  /* Ctrl+K */
   document.addEventListener('keydown', e=>{
     if((e.ctrlKey||e.metaKey) && e.key.toLowerCase() === 'k'){ e.preventDefault(); gs.focus(); }
   });
