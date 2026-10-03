@@ -78,7 +78,6 @@ td.law{color:var(--accent);font-size:12.5px;white-space:nowrap}
 .acc-b ul{margin:10px 0 10px 20px}
 .acc-b li{margin-bottom:6px}
 .acc-b p{margin-bottom:10px}
-.acc-b ol{margin:10px 0 10px 20px}
 .acc-b .stamp{color:var(--muted);font-size:12.5px;border-top:1px dashed var(--border);padding-top:10px;margin-top:14px}
 .acc-h .decree-num{background:#eef4fd;color:var(--accent);font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;white-space:nowrap;margin-left:4px}
 .note{border-left:4px solid var(--gold);background:#fdfaf1;padding:13px 17px;border-radius:0 8px 8px 0;font-size:13.5px;margin:14px 0}
@@ -95,16 +94,70 @@ footer{text-align:center;padding:26px 20px;color:var(--muted);font-size:12.5px;b
 .crime .pen{font-size:12.5px;color:var(--red);font-weight:600;background:#fdf4f3;padding:5px 10px;border-radius:6px;display:inline-block}
 .crime .cr-badge{background:#fdecea;color:var(--red);font-size:10.5px;font-weight:700;padding:2px 7px;border-radius:5px;letter-spacing:.5px}
 #toTop{display:none;position:fixed;right:20px;bottom:20px;width:44px;height:44px;border-radius:50%;border:none;background:var(--accent);color:#fff;font-size:20px;cursor:pointer;box-shadow:var(--shadow);z-index:60}
-html[data-theme=dark]{--bg:#0d131b;--card:#151e2a;--text:#e3e9f1;--muted:#92a2b8;--border:#263446}
-html[data-theme=dark] .card>h2,html[data-theme=dark] h3,html[data-theme=dark] h4,html[data-theme=dark] .quick .qt,html[data-theme=dark] .crime h5,html[data-theme=dark] .hero h2,html[data-theme=dark] .acc-h{color:#a9c8ff}
+
+/* ================= ТЁМНАЯ ТЕМА ================= */
+html[data-theme=dark]{
+  --bg:#0d131b;--card:#151e2a;--text:#e3e9f1;--muted:#92a2b8;
+  --border:#263446;--accent:#4b8ee0;
+}
+html[data-theme=dark] .card{background:var(--card);border-color:var(--border)}
+html[data-theme=dark] .sub{color:#92a2b8}
+/* заголовки */
+html[data-theme=dark] .card>h2,
+html[data-theme=dark] h3,
+html[data-theme=dark] h4,
+html[data-theme=dark] .quick .qt,
+html[data-theme=dark] .crime h5,
+html[data-theme=dark] .hero h2,
+html[data-theme=dark] .acc-h,
+html[data-theme=dark] td.term{color:#a9c8ff}
+html[data-theme=dark] .card>h2 .badge{background:#1f2d40;color:#7fb4ff}
+/* таблицы */
+html[data-theme=dark] th{background:#1c2837;color:#a9c8ff;border-bottom-color:#263446}
+html[data-theme=dark] td{color:#cfd9e6;border-bottom-color:#1e2a3a}
 html[data-theme=dark] tr:hover td{background:#1c2837}
-html[data-theme=dark] nav a:hover{background:#1c2837}
-html[data-theme=dark] th{background:#1c2837;color:var(--text)}
-html[data-theme=dark] .crime{background:#151e2a}
-html[data-theme=dark] .crime p{color:#b8c4d4}
-html[data-theme=dark] .acc{background:#151e2a}
+html[data-theme=dark] td.law{color:#7fb4ff}
+/* меню */
+html[data-theme=dark] nav a{color:#cfd9e6}
+html[data-theme=dark] nav a:hover{background:#1c2837;color:#7fb4ff}
+html[data-theme=dark] nav a.active{background:var(--accent);color:#fff}
+html[data-theme=dark] nav .navgroup{color:#7a8ba3}
+/* быстрые карточки */
+html[data-theme=dark] .quick{background:var(--card);border-color:var(--border)}
+html[data-theme=dark] .quick:hover{background:#1c2837;border-color:var(--accent)}
+html[data-theme=dark] .quick .qd{color:#92a2b8}
+/* аккордеоны */
+html[data-theme=dark] .acc{background:var(--card);border-color:var(--border)}
+html[data-theme=dark] .acc-h:hover{background:#1c2837}
 html[data-theme=dark] .acc-b{color:#b8c4d4}
-html[data-theme=dark] .acc-h .decree-num{background:#1f2d40}
+html[data-theme=dark] .acc-b .stamp{color:#92a2b8}
+html[data-theme=dark] .acc-h .decree-num{background:#1f2d40;color:#7fb4ff}
+/* карточки преступлений */
+html[data-theme=dark] .crime{background:var(--card);border-color:var(--border)}
+html[data-theme=dark] .crime p{color:#b8c4d4}
+html[data-theme=dark] .crime h5 .n{background:#2a5a9e;color:#fff}
+html[data-theme=dark] .crime .pen{background:#2a1a1a;color:#ff9a8a}
+html[data-theme=dark] .crime .cr-badge{background:#2a1a1a;color:#ff9a8a}
+/* заметки */
+html[data-theme=dark] .note{background:#1f2530;color:#cfd9e6;border-left-color:var(--gold)}
+html[data-theme=dark] .note b{color:#e3e9f1}
+html[data-theme=dark] .note.red{background:#2a1a1a;border-left-color:#c0392b}
+html[data-theme=dark] .note.blue{background:#0f1e30;border-left-color:#4b8ee0}
+html[data-theme=dark] .note.green{background:#0f2a1e;border-left-color:#1e8e5a}
+/* теги */
+html[data-theme=dark] .tag.red{background:#2a1a1a;color:#ff9a8a}
+html[data-theme=dark] .tag.amber{background:#2a2415;color:#e0b060}
+html[data-theme=dark] .tag.green{background:#15302a;color:#6dd4a8}
+html[data-theme=dark] .tag.blue{background:#152238;color:#7fb4ff}
+html[data-theme=dark] .tag.grey{background:#1f2d40;color:#92a2b8}
+/* hero */
+html[data-theme=dark] .hero{background:linear-gradient(135deg,#0a1a30 0%,#102a4d 100%)}
+html[data-theme=dark] .hero p{color:#9fb4d0}
+/* футер */
+html[data-theme=dark] footer{color:#92a2b8}
+/* кнопка наверх */
+html[data-theme=dark] #toTop{background:#4b8ee0}
+
 @media(max-width:960px){
   .layout{flex-direction:column;padding:14px}
   aside{width:100%;flex:none;position:static;max-height:none}
@@ -240,7 +293,7 @@ html[data-theme=dark] .acc-h .decree-num{background:#1f2d40}
       </div>
     </section>
 
-    <!-- ================ УПК (Statescode of Procedure) ================ -->
+    <!-- ================ ПРОЦЕССУАЛЬНЫЙ КОДЕКС ================ -->
     <section id="upk">
       <div class="card">
         <h2>Statescode of Procedure <span class="badge">Процессуальный кодекс</span></h2>
@@ -873,7 +926,7 @@ renderCrimes(4,'crimes4');
 const DECREES = [
   {
     t:'Об охране единства нации',
-    num:'По воле Вождя Великокельветского государства и Кельветской нации',
+    num:'По воле Вождя Великокельветского государства',
     tag:'Идеология',
     body:`
       <p><b>I.</b> Все граждане, военнослужащие, сотрудники государственных структур и члены партии Кельветии равны перед лицом государства вне зависимости от занимаемой должности, происхождения, звания или иных обстоятельств.</p>
@@ -1120,7 +1173,6 @@ document.querySelectorAll('.acc-h').forEach(h=>{
     if(e.key !== 'Enter') return;
     const q = gs.value.trim().toLowerCase();
     if(!q) return;
-    /* УК */
     for(const level of [1,2,3,4]){
       const found = CRIMES[level].find(c => c.t.toLowerCase().includes(q) || c.d.toLowerCase().includes(q) || c.n.includes(q));
       if(found){
@@ -1133,7 +1185,6 @@ document.querySelectorAll('.acc-h').forEach(h=>{
         return;
       }
     }
-    /* Указы */
     const idx = DECREES.findIndex(d => d.t.toLowerCase().includes(q) || d.body.toLowerCase().includes(q));
     if(idx>=0){
       goTo('decrees');
